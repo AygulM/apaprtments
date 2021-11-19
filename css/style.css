@@ -2,25 +2,33 @@
     padding: 0;
     margin: 0;
 }
+html{
+    height: 100%;
+}
 body{
     padding: 0;
     margin: 0;
-    font-family: 'Open Sans';
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'Vollkorn',  Georgia, 'Times New Roman', Times, serif;
+}
+main{
+    flex-grow: 1;
 }
 .section__wrapper{
     width: 1280px;
     margin: 0 auto;
 }
+a{
+    text-decoration: none;
+}
 /*---Айгуль--*/
 /*----------------HEADER----------------*/
 .header {
-    width: 1280px;
-    margin: 0 auto;
-    font-family: 'Open Sans';
     position: relative;
-    margin-bottom: 120px;
+    margin-bottom: 125px;
 }
-
 .header__logo{
     position: relative;
     width: 70px;
@@ -55,15 +63,15 @@ body{
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
+    color: #0D3A2C;
 }
 .header__main{
     display: flex;
-    width: 1280px;
     height: 656px;
 }
-.header__part-one{
+.header__part--one{
     width: 640px;
-    background: rgba(36, 171, 112, 0.04);
+    background: rgba(110, 151, 115, 0.26);
     border-radius: 50px 0 0 0;
 }
 .header__content{
@@ -74,20 +82,21 @@ body{
     padding-top: 88px;
     margin-bottom: 110px;
     font-size: 64px;
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
     line-height: 80px;
+    color: #0D3A2E;
+    text-align: left;
 }
 .header__text{
     font-size: 20px;
     margin-bottom: 82px;
     color: #555555;
 }
-.header__part-two{
+.header__part--two{
     width: 640px;
     height: 656px;
-    background: url(../img/header.jpg);
+    background: url(../img/header.png);
     background-size: cover;
     border-radius: 0 50px 0 0;
 }
@@ -119,7 +128,10 @@ body{
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
-    color: #222222;
+    color: #0D3A2E;
+}
+.video__button:hover .video__p:hover{
+    color: #6E9773;
 }
 .header__filters{
     position: relative;
@@ -142,95 +154,267 @@ body{
 .search__button{
     width: 200px;
     height: 100px;
-    background: #24AB70;
+    background: #6E9773;
     border: none;
     border-radius: 280px;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 24px;
-    padding-left: 15px;
+    padding-left: 18px;
 }
-.search__icon{
+.search__button:hover{
+    font-size: 18px;
+    padding-left: 15px;
+    background: #30966a;
+}
+.icon__magnifier, .search__icon{
     width: 19px;
     height: 19px;
+}
+.search__icon{
     position: absolute;
     top: 41px;
     left: 49px;
-    background: #24AB70;
+    background: transparent;
     border: none;
+}
+.filter__icon{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 24px;
+    height: 24px;
+}
+.filers__items{
+    display: flex;
+    width: 800px;
+}
+.filter__item {
+    position: relative;
+    width: 155px;
+    height: 48px;
+    margin-top: 25px;
+    margin-right: 20px;
+    border-right: 1px lightgrey solid;
+}
+.filter__1{
+    margin-left: 75px;
+}
+.filter__4{
+    margin-right: none;
+    border-right: none;
+}
+.f__icon--p{
+    position: absolute;
+    top: 2px;
+    left: 40px;
+    font-size: 18px;
+    line-height: 24px;
+}
+.f__icon--p select{
+    width: 80px;
+}
+.room__filter select{
+    width: 95px;
+}
+.price__filter{
+    background: transparent;
+    width: 100px;
+    border: none;
+    color: #0D3A2E;
+}
+.filter__select{
+    background: transparent;
+    border: none;
+    color: #0D3A2E;
+}
+.filter__select:focus{
+    color: #6E9773;
+}
+@media (max-width:375px){
+    .header {
+        width: 100%;
+        margin-bottom: 120px;
+    }
+    .header__logo{
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: -105px;
+    }
+    .header__main{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .header__part--one{
+        width: 100%;
+        height: 500px;
+        order: 1;
+        background-color: honeydew;
+        border-radius: 50px;
+    }
+    .header__text{
+        display: none;
+    }
+    .header__part--two{
+        width: 100%;
+        height: 380px;
+        background-size: cover;
+        background-position: bottom;
+        margin-bottom: -50px;
+        border-radius: 0 0 0 0;
+        order: 0;
+    }
+    .header__content{
+        padding-left: 0;
+    }
+    .header__title{
+        margin-top: -155px;
+        padding-top: 0;
+        margin-bottom: 0;
+        font-size: 35px;
+        line-height: 80px;
+        text-align: center;
+        color: black;/*временно*/
+    }
+    .header__video{
+        display: none;
+    }
+    .filers__items{
+        width: 90%;
+        height: 200px;
+        margin: 0 auto;
+        border: solid green;
+    }
+    .header__filters{
+        flex-wrap: wrap;
+        width: 100%;
+        height: 500px;
+        margin: 0 auto;
+        margin-left: 0;
+        margin-top: -500px;
+        border-radius: 50px;
+    }
+    .filter__search{
+        position: relative;
+        width: 80%;
+        height: 50px;
+        margin: 0 auto;
+        border: solid green
+    }
+    .search__button{
+        width: 100%;
+        height: 50px;
+        font-size: 18px;
+        line-height: 24px;
+        padding-left: 0;
+    }
 }
 /*-----------------------Лёня-----------------------*/
 /*--------------NEWS---------------------------*/
-
 .news__wrapper{
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    width: 1280px;
-    padding-top:64px;
-    padding-bottom: 72px;   
+    padding-bottom: 72px;
 }
-
+.news__item, .news__item_2{
+    border-radius: 50px;
+}
 .news__item{
-    box-sizing: border-box;
     width: 600px;
     height: 520px;    
     background-color:#F4FBF8;
     display: flex;
-    flex-direction: column;
+    
 }
-
 .news__item_2{
-    justify-content: space-between;
-      width: 600px;
-    background-color:#F4FBF8;
+    align-content: space-between;
+    width: 600px;
+    height: 520px; 
     display: flex;
     flex-wrap: wrap;
 }
-
-.news__flex-elem_1{
-    width: 600px;
-    height: 256px;
-    text-align: right;
+.news__content--one, .news__content--two{
+    display: flex;   
+    border-radius: 50px;
 }
-
-.news__flex-elem{
+.news__content--two{
     width: 600px;
-    height: 256px;
-    text-align: right;
-    border: solid 5px white;
+    height: 48%;
+    background-color:#F4FBF8;
+}
+.news__part-one, .news__part-one-2{
+    width: 300px;
+    background: url(../img/news_img.jpg);
+    background-size: cover;
+    border-radius: 50px 0 0 50px;
+}
+.news__part-one{
+    height: 520px;
+}
+.news__part-one-2{
+    height: 100%;
+}
+.news__part-two{
+    width: 300px;
+    border-radius: 0 50px 0 0;
+    padding-left: 25px;
+    padding-top: 30px;
 }
 /*---Айгуль--*/
 /*--------------CATALOG---------------------------*/
 .catalog__wrapper{
-    width: 1280px;
+    padding-bottom: 60px;
+    position: relative;
+    margin-bottom: 60px;
 }
 .catalog__title{
     margin-bottom: 25px;
 }
+.catalog__main{
+    position: relative;
+    width: 100%;
+}
+.catalog__button{
+    display: flex;
+    justify-content: center;
+    width: 25px;
+    height: 52px;
+    position: absolute;
+    top: 50%;
+}
+.catalog__button--left{
+    left: -2.3%;
+}
+.catalog__button--right{
+    right: -2.3%;
+}
 .catalog__items{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
 }
 .catalog__item{
-    width: 411px;
+    width: 32%;
     height: 480px;
     background: #FAFAFA;
     border-radius: 16px;
 }
 
 .catalog__img--1{
-    background: url(../img/catalog1.jpg);
+    background: url(../img/catalog1.png);
+    background-position: center;
 }
 .catalog__img--2{
-    background: url(../img/catalog2.jpg);
+    background: url(../img/catalog2.png);
 }
 .catalog__img--3{
-    background: url(../img/catalog3.jpg);
+    background: url(../img/catalog3.png);
 }
 .catalog__img{
-    width: 411px;
+    width: 100%;
     height: 320px;
     background-size: cover;
     border-radius: 16px 16px 0px 0px;
@@ -238,9 +422,14 @@ body{
 .catalog__content{
     padding-left: 16px;
 }
+.catlog__address{
+    color: #24AB70;
+    margin-top: 25px;
+}
 .catalog__p{
-    padding-top: 24px;
-    margin-bottom: 24px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    color: #000000;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -249,19 +438,46 @@ body{
 .catalog__info{
     display: flex;
     flex-wrap: nowrap;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 18px;
+    justify-content: space-between;
 }
-.catalog__price{
-    width: 50%;
-    border-right: solid grey 1px;
+.catalog__info--item{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 18px;
 }
 .catalog__sqm{
-    padding-left: 15px;
+    padding-right: 10px;
+    border-right: 1px solid grey;
 }
-
+.catalog__floor{
+    padding-left: 10px;
+}
+.catalog__price{
+    margin-right: 60px;
+    font-size: 22px;
+}
+.catalog__p:hover{
+    color: #555555;
+}
+.catalog__all{
+    position: absolute;
+    width: 129px;
+    height: 40px;
+    background: #D9E4DB;
+    border-radius: 280px;
+    bottom: 0;
+    right: 0;
+}
+.catalog__all--button{
+    text-decoration: none;
+}
+.catalog__all--contain{
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+    color: #0D3A2E;
+}
 /*-------------------Ксюша--------------------------*/
 /*--------------REVIEWS---------------------------*/
 .reviews__wrapper{
@@ -271,41 +487,348 @@ body{
     padding-top:64px;
     padding-bottom: 72px;    
 }
-
 .reviews__item{
-    box-sizing: border-box;
-    width: 380px;
     height: 398px;    
+    width: 350px;
     background-color:#24AB70;
     display: flex;
     flex-direction: column;
-    width: 350px;
     margin-top: 20px;
     margin-bottom: 20px;
+    border-radius: 16px;
 }
-
-.reviews__item__whiteBack{
-    background-color: white;
+.reviews__whiteBack{
+    background-color: #F8F8F8;
 }
-
+.reviews__greenback{
+    background-color: #6E9773;
+}
 .reviews__img{
-    margin: 20px;
-    text-align: right;
+    width: 180px;
+    height: 180px;
+    background-color: #F3FBEF;
+    background-image: url(../img/revies__cat.gif);
+    background-size: cover;
+    border-radius: 50%;
+    margin-top: -123px;
+    margin-left: 150px;
 }
-
-.reviews__text__name{
+.reviews__text--name{
     font-size: larger;
     color: aliceblue;
     margin: 20px;    
     text-align: right;
 }
-.reviews__text__name__blackText{
+.reviews__blackText{
     color: black;
 }
-
 .reviews__text{
     margin: 15px;
 }
 .reviews__text__white{
     color: rgb(255, 249, 249);
+}
+/*--------------REALTOR---------------------------*/
+.realtor__one{
+    margin:  0 auto;
+}
+.realtor__one a{
+    color: #0D3A2E;
+}
+/*--------------REALTOR--------------------------new page-*/
+.realtor__wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top:20px;
+    padding-bottom: 20px;   
+    background-color: #E4E8E1;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    border-radius: 20px;
+}
+.realtor__about{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;   
+}
+.realtor__img{
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+}
+.realtor__exp{
+    margin: 0 auto;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #1D271E;
+}
+.realtor__about--middle{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 70px;
+}
+.realtor__name{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #1D271E;
+}
+.realtor__offers{
+    margin-top: 50px;
+    font-size: 20px;
+    color: #ffffff;
+}
+.realtor__star{
+    margin-top: 60px;       
+}
+.realtor__about--last{
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;  
+    margin-top: 20px;
+}
+.realtor__number{    
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #6E9773;
+    color: #E8E8E8;
+    border-radius: 20px;
+}
+.realtor__number a{
+    text-decoration: none;
+    color: #E8E8E8;
+}
+.realtor__number a:hover{
+    color: #0D3A2E;
+    text-decoration:underline ;
+}
+
+.realtor__number a:focus{
+    outline: #E8E8E8 solid 1px;
+}
+
+.realtor__number a:active{
+    color: #E8E8E8;
+    background: rgba(150,150,150,.5);
+}
+
+.realtor__communication{
+    margin-top: 20px;    
+}
+.realtor__communication img{
+    padding: 5px;
+}
+
+.realtor__description{
+    padding-left: 30px;
+    font-size: 20px;
+    color: #1D271E;
+}
+.realtor__underline{
+    font-weight: bold;
+    text-decoration: black ;
+}
+.realtor__footer{
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-top: 30px;
+    background-color: #6E9773;
+}
+.realtor__footer a{
+    text-decoration: none;
+    color: #E8E8E8;
+}
+.realtor__footer a:hover{
+    color: #0D3A2E;
+    text-decoration:underline ;
+}
+
+.realtor__footer a:focus{
+    outline: #E8E8E8 solid 1px;
+}
+
+.realtor__footer a:active{
+    color: #E8E8E8;
+    background: rgba(150,150,150,.5);
+}
+.realtor__part--two{
+    background: url(../img/realtor__header__fon.png);
+    background-position: center;
+}
+/*---Айгуль--*/
+/*----------------MAP----------------------- ----*/
+
+.map__wrapper{
+    position: relative;
+}
+
+.map__bacgr{
+    height: 677px;
+    z-index: 0;
+}
+.map__doublegis{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    z-index: 0;
+}
+.map__content{
+    position: relative;
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: transparent solid;
+    z-index: 10;
+    border-radius: 30px;
+    margin-top: -250px;
+    margin-bottom: 100px;
+}
+.map__title{
+    margin-left: 66px;
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+}
+.map__contact{
+    margin-top: 30px;
+}
+.map__form{
+    display: flex;
+    justify-content: right;
+    margin-right: 66px;
+}
+.map__email, .map__submit{
+    border: none;
+    height: 43px;
+    border-radius: 50px;
+    margin: 0;
+    padding: 0;
+}
+.map__email{
+    padding-left: 24px;
+    width: 435px;
+    background-color: #FAFAFA;
+    color:#555555;
+}
+.map__submit{
+    background-color: #24AB70;
+    width: 125px;
+    margin-left: -125px;
+    color: #FFFFFF;
+}
+.map__submit:hover{
+    background-color: #0D3A2C;
+}
+/*---Виталий--*/
+/*----------------FOOTER----------------------- ----*/
+.footer {
+    background:  #6E9773;
+    color: #fff;
+    font-size: 100%;
+    padding: 5px;
+    clear : both;
+}
+.footer a {
+    color: #000000;
+}
+.footer a:hover {
+    color: white;
+}
+.footer p {
+    padding: 2px;
+    text-align: center;
+}
+.clearfloat {
+    clear: both;
+}
+/*-----------new page aparrtttment---------------*/
+.newheader__main{
+    display: flex;
+    height: 210px;
+    background: rgba(110, 151, 115, 0.26);
+    border-radius: 50px 50px 0 0;
+}
+.newheader__part--one, .newheader__part--two{
+    width: 50%;
+}
+.newheader__part--one{
+    border-radius: 50px 0 0 0;
+}
+.newheader__part--two{
+    height: 210px;
+    border-radius: 0 50px 0 0;
+    background-size: cover;
+}
+.apartmen__part--two{
+    background-image: url(../img/apartment__header__fon.png);
+    background-position: center center;
+}
+.apartmentone__wrapper{
+    margin-bottom: 50px;
+}
+.apartmentone__info{
+    width: 70%;
+    padding-left: 60px;
+}
+.newheader__content{
+    padding-top: 40px;
+    padding-left: 30px;
+}
+.apartmentone__content{
+    display: flex;
+    justify-content: space-between;
+}
+.apartmentone__title{
+    padding-left: 60px;
+    padding-bottom: 25px;
+}
+.apartmentone__img--slider{
+    display: flex;
+    position: relative;
+    width: 30%;
+    height: 280px;
+    margin-right: 25px;
+}
+.apartmentone__button{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 52px;
+    top: 50%;
+}
+.button__apartment, .button__catalog{
+    border: none;
+    background: transparent;
+}
+.apartmentone__button--left{
+    left: 0;
+}
+.apartmentone__button--right{
+    right: 0;
+}
+.apartmentone__img{
+    align-self: center;
+    width: 320px;
+    height: 280px;
+    margin: 0 auto;
 }

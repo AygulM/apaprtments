@@ -3,30 +3,47 @@
 <head>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <!---стили по разделам-->
+    <script defer type="text/javascript" src="js/script.js"></script>
+    <!---font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&family=Vollkorn&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="keywords" content="аренда, квартиры, Челябинск">
+    <meta name="description" content="Лучший сервис по аренде квартир в г. Челябинске">
+    <meta property="og:title" content="Аренда квартир">
+    <meta property="og:site_name" content="ChelRent">
+    <meta property="og:url" content="index.html"><!----->
+    <meta property="og:description" content="Лучший сервис по аренде квартир в г. Челябинске">
+    <meta property="og:image" content="https://sun9-34.userapi.com/impg/pw28LSRQY1vaZb09FO3gWpGt-mV5JmzcIJleug/eqLpp4uFyuk.jpg?size=338x330&quality=96&sign=0f3265a8aa09be98cbfc454f84686dd3&type=album">
+    <link rel="icon" type="image/ico" sizes="32x32" href="icons/favicon.ico">
+    <link rel="icon" type="image/ico" sizes="16x16" href="icons/favicon.ico">
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <title>Аренда квартир</title>
 </head>
 <body>
     <header class="header"><!---Айгуль-->
-        <div class="header__wrapper">
+        <div class="header__wrapper section__wrapper">
             <div class="header__logo">
-                <div class="logo__parts">
-                    <svg class="logo__part logo__part--one" width="11" height="36" viewBox="0 0 11 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0L11 6.96774V36H0V0Z" fill="#F95F5F"/>
-                    </svg>   
-                    <svg class="logo__part logo__part--two" width="10" height="40" viewBox="0 0 10 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0L10 6V40H0V0Z" fill="#24AB70"/>
-                    </svg>    
-                    <svg class="logo__part logo__part--three" width="11" height="24" viewBox="0 0 11 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0L11 5.76V24H0V0Z" fill="#222222"/>
-                    </svg>                    
-                </div>
-                <div class="logo__title">ChelRent</div>
+                <a href="index.html">
+                    <div class="logo__parts">
+                        <svg class="logo__part logo__part--one" width="11" height="36" viewBox="0 0 11 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0L11 6.96774V36H0V0Z" fill="#0D3A2E"/>
+                        </svg>   
+                        <svg class="logo__part logo__part--two" width="10" height="40" viewBox="0 0 10 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0L10 6V40H0V0Z" fill="#7DB383"/>
+                        </svg>    
+                        <svg class="logo__part logo__part--three" width="11" height="24" viewBox="0 0 11 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0L11 5.76V24H0V0Z" fill="#FFB903"/>
+                        </svg>                    
+                    </div>
+                    <div class="logo__title">ChelRent</div>
+                </a>
             </div>
             <div class="header__main">
-                <div class="header__part-one">
+                <div class="header__part--one">
                     <div class="header__content">
                         <h1 class="header__title">Аренда квартир</h1>
                         <p class="header__text">Лучший сервис по аренде квартир в г. Челябинске</p>
@@ -41,24 +58,86 @@
                                         <path d="M3.43335 21C2.90997 20.9969 2.39313 20.8833 1.91669 20.6667C1.4014 20.4395 0.962376 20.0689 0.652058 19.599C0.34174 19.1291 0.173242 18.5797 0.166687 18.0167V3.98333C0.173242 3.42024 0.34174 2.87094 0.652058 2.40103C0.962376 1.93112 1.4014 1.56046 1.91669 1.33333C2.50959 1.05327 3.16924 0.945407 3.82047 1.02202C4.47169 1.09864 5.0883 1.35665 5.60002 1.76666L14.1 8.78333C14.4333 9.04869 14.7025 9.3858 14.8875 9.76959C15.0726 10.1534 15.1687 10.5739 15.1687 11C15.1687 11.426 15.0726 11.8466 14.8875 12.2304C14.7025 12.6142 14.4333 12.9513 14.1 13.2167L5.60002 20.2333C4.98732 20.7302 4.22221 21.0009 3.43335 21Z" fill="#24AB70"/>
                                     </svg>                                                                       
                                 </div>
-                                <div class="video__p">Watch video</div>
+                                <div class="video__p">Посмотреть видео</div>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="header__part-two"></div>
+                <div class="header__part--two"></div>
             </div>
             <div class="header__filters">
                 <div class="filers__items">
-                    <div class="filter__1">filter 1</div>
-                    <div class="filter__2">filter 2</div>
-                    <div class="filter__3">filter 3</div>
-                    <div class="filter__4">filter 4</div>
+                    <div class="filter__item filter__1">
+                        <div class="filter__icon filter__icon--loc">
+                            <svg class="location__icon" width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.25 11C12.0267 11 12.6562 10.3284 12.6562 9.5C12.6562 8.67157 12.0267 8 11.25 8C10.4733 8 9.84375 8.67157 9.84375 9.5C9.84375 10.3284 10.4733 11 11.25 11Z" fill="#6E9773"/>
+                                <path d="M11.25 2C9.2738 1.99989 7.37743 2.83176 5.97304 4.31479C4.56865 5.79782 3.76976 7.81216 3.75 9.92C3.75 15.4 10.3594 21.5 10.6406 21.76C10.8104 21.9149 11.0265 22.0001 11.25 22.0001C11.4735 22.0001 11.6896 21.9149 11.8594 21.76C12.1875 21.5 18.75 15.4 18.75 9.92C18.7302 7.81216 17.9313 5.79782 16.527 4.31479C15.1226 2.83176 13.2262 1.99989 11.25 2ZM11.25 13C10.601 13 9.96663 12.7947 9.42703 12.4101C8.88744 12.0256 8.46687 11.4789 8.21852 10.8394C7.97017 10.1999 7.90519 9.49612 8.0318 8.81718C8.15841 8.13825 8.47092 7.51461 8.92981 7.02513C9.3887 6.53564 9.97336 6.2023 10.6099 6.06725C11.2464 5.9322 11.9061 6.00152 12.5057 6.26642C13.1052 6.53133 13.6177 6.97993 13.9783 7.5555C14.3388 8.13108 14.5312 8.80777 14.5312 9.5C14.5312 10.4283 14.1855 11.3185 13.5702 11.9749C12.9548 12.6313 12.1202 13 11.25 13V13Z" fill="#6E9773"/>
+                            </svg>
+                            
+                            <p class="location__filter f__icon--p">
+                                <select class="filter__select" id="locationSelect">
+                                    <option>Район</option>
+                                    <option value="">Центральный</option>
+                                    <option value="">Калининский</option>
+                                    <option value="">Курчатовский</option>
+                                    <option value="">Советский</option>
+                                    <option value="">Металлургический</option>
+                                    <option value="">Ленинский</option>
+                                    <option value="">Тракторозаводский</option>
+                                </select>
+                            </p>                                                  
+                        </div>
+                    </div>
+                    <div class="filter__item filter__2">
+                        <div class="filter__icon filter__icon--street">
+                            <svg class="street__icon" width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.25 11C12.0267 11 12.6562 10.3284 12.6562 9.5C12.6562 8.67157 12.0267 8 11.25 8C10.4733 8 9.84375 8.67157 9.84375 9.5C9.84375 10.3284 10.4733 11 11.25 11Z" fill="#6E9773"/>
+                                <path d="M11.25 2C9.2738 1.99989 7.37743 2.83176 5.97304 4.31479C4.56865 5.79782 3.76976 7.81216 3.75 9.92C3.75 15.4 10.3594 21.5 10.6406 21.76C10.8104 21.9149 11.0265 22.0001 11.25 22.0001C11.4735 22.0001 11.6896 21.9149 11.8594 21.76C12.1875 21.5 18.75 15.4 18.75 9.92C18.7302 7.81216 17.9313 5.79782 16.527 4.31479C15.1226 2.83176 13.2262 1.99989 11.25 2ZM11.25 13C10.601 13 9.96663 12.7947 9.42703 12.4101C8.88744 12.0256 8.46687 11.4789 8.21852 10.8394C7.97017 10.1999 7.90519 9.49612 8.0318 8.81718C8.15841 8.13825 8.47092 7.51461 8.92981 7.02513C9.3887 6.53564 9.97336 6.2023 10.6099 6.06725C11.2464 5.9322 11.9061 6.00152 12.5057 6.26642C13.1052 6.53133 13.6177 6.97993 13.9783 7.5555C14.3388 8.13108 14.5312 8.80777 14.5312 9.5C14.5312 10.4283 14.1855 11.3185 13.5702 11.9749C12.9548 12.6313 12.1202 13 11.25 13V13Z" fill="#6E9773"/>
+                            </svg>
+                            <p class="street__filter f__icon--p">
+                                <select class="filter__select" id="streetSelect">
+                                    <option>Улица</option>
+                                    <option value="">Молодогвардейцев</option>
+                                    <option value="">Ворошилова</option>
+                                    <option value="">П-р Победы</option>
+                                    <option value="">П-р Ленина</option>
+                                </select>
+                            </p>                                                    
+                        </div>
+                    </div>
+                    <div class="filter__item filter__3">
+                        <div class="filter__icon filter__icon--room">   
+                            <svg class="room__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24" xml:space="preserve">
+                                <g /><g>
+                                    <path d="M23.6,10.3L13.2,2.4c-0.7-0.5-1.7-0.5-2.5,0L0.4,10.3C-0.4,10.9,0,12,1,12h1v6.1C2,20.2,3.8,22,6,22h2   c0.6,0,1-0.4,1-1v-4.9C9,15,9.9,14,11,14h2c1.1,0,2,1,2,2.1V21c0,0.5,0.4,1,1,1h2c2.2,0,4-1.8,4-3.9V12h1   C23.9,12,24.3,10.9,23.6,10.3z" fill="#6E9773"/>
+                                </g>
+                            </svg>                                                     
+                            <p class="room__filter f__icon--p">
+                                <select class="filter__select" id="roomSelect">
+                                    <option>Комнаты</option>
+                                    <option value="1room">1</option>
+                                    <option value="2room">2</option>
+                                    <option value="3room">3</option>
+                                    <option value="4room">4</option>
+                                    <option value="5AndMoreRoom">5+</option>
+                                    <option value="studioapartment">студия</option>
+                                </select>
+                            </p>                                                    
+                        </div>
+                    </div>
+                    <div class="filter__item filter__4">
+                        <div class="filter__icon filter__icon--price">
+                            <svg class="price__icon" xmlns="http://www.w3.org/2000/svg" height="23" viewBox="0 0 1792 1792" width="24">
+                                <path d="M1299 565q0-100-65-162t-171-62h-320v448h320q106 0 171-62t65-162zm237 0q0 193-126.5 315t-326.5 122h-340v118h505q14 0 23 9t9 23v128q0 14-9 23t-23 9h-505v192q0 14-9.5 23t-22.5 9h-167q-14 0-23-9t-9-23v-192h-224q-14 0-23-9t-9-23v-128q0-14 9-23t23-9h224v-118h-224q-14 0-23-9t-9-23v-149q0-13 9-22.5t23-9.5h224v-629q0-14 9-23t23-9h539q200 0 326.5 122t126.5 315z" fill="#6E9773"/>
+                            </svg>
+                            <input class="price__filter f__icon--p" type="text" value="Цена">
+                        </div>
+                    </div>
                 </div>
                 <div class="filter__search">
-                    <input class="search__button" type="submit" id="search__submit" value="Search...">
+                    <input class="search__button" type="submit" id="search__submit" value="Поиск...">
                     <button class="search__icon">
-                        <svg class="icon__magnifier" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="icon__magnifier" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.71 16.29L14.31 12.9C15.407 11.5025 16.0022 9.77666 16 8C16 6.41775 15.5308 4.87103 14.6518 3.55544C13.7727 2.23985 12.5233 1.21447 11.0615 0.608967C9.59966 0.00346625 7.99113 -0.15496 6.43928 0.153721C4.88743 0.462403 3.46197 1.22433 2.34315 2.34315C1.22433 3.46197 0.462403 4.88743 0.153721 6.43928C-0.15496 7.99113 0.00346625 9.59966 0.608967 11.0615C1.21447 12.5233 2.23985 13.7727 3.55544 14.6518C4.87103 15.5308 6.41775 16 8 16C9.77666 16.0022 11.5025 15.407 12.9 14.31L16.29 17.71C16.383 17.8037 16.4936 17.8781 16.6154 17.9289C16.7373 17.9797 16.868 18.0058 17 18.0058C17.132 18.0058 17.2627 17.9797 17.3846 17.9289C17.5064 17.8781 17.617 17.8037 17.71 17.71C17.8037 17.617 17.8781 17.5064 17.9289 17.3846C17.9797 17.2627 18.0058 17.132 18.0058 17C18.0058 16.868 17.9797 16.7373 17.9289 16.6154C17.8781 16.4936 17.8037 16.383 17.71 16.29ZM2 8C2 6.81332 2.3519 5.65328 3.01119 4.66658C3.67047 3.67989 4.60755 2.91085 5.7039 2.45673C6.80026 2.0026 8.00666 1.88378 9.17055 2.11529C10.3344 2.3468 11.4035 2.91825 12.2426 3.75736C13.0818 4.59648 13.6532 5.66558 13.8847 6.82946C14.1162 7.99335 13.9974 9.19975 13.5433 10.2961C13.0892 11.3925 12.3201 12.3295 11.3334 12.9888C10.3467 13.6481 9.18669 14 8 14C6.4087 14 4.88258 13.3679 3.75736 12.2426C2.63214 11.1174 2 9.5913 2 8Z" fill="white"/>
                         </svg>                                
                     </button>
@@ -67,124 +146,194 @@
         </div>
     </header>
     <main class="main">
-        <section class="section news">
-            <div class="section__wrapper news__wrapper">
-                <!---Лёня-->
-                <div class="news__item">
-                    <div class="news__flex-elem_1">
-                        <div class="news__header">
-                            <a>Заголовок 1</a>
-                        </div>
-                        <div class="news__text">
-                            Текст для новостей
-                        </div>
-                    </div>
-                </div>
-                <div class="news__item_2">
-                    <div class="news__flex-elem">
-                        <div class="news__header">
-                            <a>Заголовок 2</a>
-                        </div>
-                        <div class="news__text">
-                            Текст для новостей
-                        </div>
-                    </div>
-                    <div class="news__flex-elem">
-                        <div class="news__header">
-                            <a>Заголовок 3</a>
-                        </div>
-                        <div class="news__text">
-                            Текст для новостей
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="section catalog">
             <div class="section__wrapper catalog__wrapper">
                 <!---Айгуль-->
                 <h2 class="catalog__title">Квартиры</h2>
-                <div class="catalog__items">
-                    <div class="catalog__item">
-                        <div class="catalog__img catalog__img--1"></div>
-                        <div class="catalog__content">
-                            <p class="catalog__p">Квартира 3 ком</p>
-                            <div class="catalog__info">
-                                <p class="catalog__price">22 500 ₽</p>
-                                <p class="catalog__sqm">150 кв.м</p>
+                <div class="catalog__main">
+                    <div class="catalog__button catalog__button--left">
+                        <button class="button__catalog" type="button">
+                            <svg class="c__buton" width="35" height="52" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+                                <polygon points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 " fill="#6E9773"/>
+                            </svg>
+                        </button>            
+                    </div>
+                    <div class="catalog__button catalog__button--right">
+                        <button class="button__catalog" type="button">
+                            <svg class="c__buton" width="35" height="52" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve">
+                                <polygon points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 " fill="#6E9773"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="catalog__items">
+                        <div class="catalog__item">
+                            <div class="catalog__img catalog__img--1"></div>
+                            <div class="catalog__content">
+                                <div class="catlog__address">Челябинск, Молодогвардейев 77</div>
+                                <a class="catalog__p--a" href="apartment__one.html"><p class="catalog__p">Квартира 1 комнатная</p></a>
+                                <div class="catalog__info">
+                                    <div class="catalog__info--item">
+                                        <p class="catalog__sqm">36,5 кв.м</p>
+                                        <p class="catalog__floor">3 этаж</p>
+                                    </div>
+                                    <div class="catalog__info--item">
+                                        <p class="catalog__price">22 500 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__item">
+                            <div class="catalog__img catalog__img--2"></div>
+                            <div class="catalog__content">
+                                <div class="catlog__address">Челябинск, Солнечная 15</div>
+                                <a class="catalog__p--a" href="apartment__one.html"><p class="catalog__p">Квартира 2-х комнатная</p></a>
+                                <div class="catalog__info">
+                                    <div class="catalog__info--item">
+                                        <p class="catalog__sqm">50 кв.м</p>
+                                        <p class="catalog__floor">9 этаж</p>
+                                    </div>
+                                    <div class="catalog__info--item">
+                                        <p class="catalog__price">30 500 ₽</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__item">
+                            <div class="catalog__img catalog__img--3"></div>
+                            <div class="catalog__content">
+                                <div class="catlog__address">Челябинск, Проспект Ленина 125</div>
+                                <a class="catalog__p--a" href="apartment__one.html"><p class="catalog__p">Квартира 3-х комнатная</p></a>
+                                <div class="catalog__info">
+                                    <div class="catalog__info--item">
+                                        <p class="catalog__sqm">60 кв.м</p>
+                                        <p class="catalog__floor">4 этаж</p>
+                                    </div>
+                                    <div class="catalog__info--item">
+                                        <p class="catalog__price">50 500 ₽</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="catalog__item">
-                        <div class="catalog__img catalog__img--2"></div>
-                        <div class="catalog__content">
-                            <p class="catalog__p">Квартира 1 ком</p>
-                            <div class="catalog__info">
-                                <p class="catalog__price">22 500 ₽</p>
-                                <p class="catalog__sqm">33 кв.м</p>
-                            </div>
+                </div>
+                <div class="catalog__all">
+                    <a class="catalog__all--button" href="#">
+                        <div class="catalog__all--contain">
+                            Посмотреть всё
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="section news">
+            <div class="section__wrapper news__wrapper">
+                <!---Лёня-->
+                <div class="news__item">
+                    <div class="news__content--one">
+                        <div class="news__part-one"></div>
+                        <div class="news__part-two">
+                            <h2>Заголовок 1</h2>
+                            <p>Новость новость новость новость</p>
                         </div>
                     </div>
-                    <div class="catalog__item">
-                        <div class="catalog__img catalog__img--3"></div>
-                        <div class="catalog__content">
-                            <p class="catalog__p">Квартира х комнат</p>
-                            <div class="catalog__info">
-                                <p class="catalog__price">22 500 ₽</p>
-                                <p class="catalog__sqm">50 кв.м</p>
-                            </div>
+                </div>
+                <div class="news__item_2">
+                    <div class="news__content--two">
+                        <div class="news__part-one-2"></div>
+                        <div class="news__part-two">
+                            <h2>Заголовок 1</h2>
+                            <p>Новость новость новость новость</p>
+                        </div>
+                    </div>
+                    <div class="news__content--two">
+                        <div class="news__part-one-2"></div>
+                        <div class="news__part-two">
+                            <h2>Заголовок 1</h2>
+                            <p>Новость новость новость новость</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        
         <section class="section realtor">
             <div class="section__wrapper realtor__wrapper">
                 <!---Вениамин-->
+                <div class="realtor__one"><a href="realtor.html">Realtor 1</a></div>
             </div>
         </section>
         <section class="section reviews">
             <div class="section__wrapper reviews__wrapper">
                 <!---Ксюша-->
-            <div class="reviews__item reviews__item__whiteBack">                            
-                <div class="reviews__text__name reviews__text__name__blackText">
-                    <a>Имя №1</a>                       
+                <div class="review__card">
+                    <div class="reviews__item reviews__whiteBack">                            
+                        <div class="reviews__text--name reviews__blackText">
+                            <h3 >Имя №1</h3>                       
+                        </div>
+                        <div class="reviews__text">
+                            Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                        </div>                    
+                    </div>
+                    <div class="reviews__img reviews__img--one"></div> 
                 </div>
-                <div class="reviews__text">
-                    Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                <div class="review__card">
+                    <div class="reviews__item reviews__greenback">                           
+                        <div class="reviews__text--name">
+                            <h3 >Имя №2</h3>
+                        </div>
+                        <div class="reviews__text reviews__text__white">
+                            Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                        </div>
+                    </div>
+                    <div class="reviews__img reviews__img--two">
+                    </div>   
                 </div>
-                <div class="reviews__img">
-                    <img src="img/reviews__round.png">
-                </div>                              
-            </div>
-            <div class="reviews__item">                           
-                <div class="reviews__text__name">
-                    <a>Имя №2</a>
-                </div>
-                <div class="reviews__text reviews__text__white">
-                    Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
-                </div>
+                <div class="review__card">
+                    <div class="reviews__item reviews__whiteBack">                           
+                        <div class="reviews__text--name reviews__blackText">
+                            <h3>Имя №3</h3>
+                        </div>
+                        <div class="reviews__text">
+                            Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                        </div>
+                    </div>
                     <div class="reviews__img">
-                        <img src="img/reviews__round.png">
-                    </div>       
-            </div>
-            <div class="reviews__item reviews__item__whiteBack">                           
-                    <div class="reviews__text__name reviews__text__name__blackText">
-                    <a>Имя №3</a>
+                    </div>    
                 </div>
-                <div class="reviews__text">
-                    Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
-                </div>
-                <div class="reviews__img">
-                    <img src="img/reviews__round.png">
-                </div>    
             </div>
+        </section>
+        <section class="section map">
+            <div class="section__wrapper map__wrapper">
+                <div class="map__bacgr">
+                    <iframe class="map__doublegis" id="map_664233532" frameborder="0"  sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe><script type="text/javascript">(function(e,t){var r=document.getElementById(e);r.contentWindow.document.open(),r.contentWindow.document.write(atob(t)),r.contentWindow.document.close()})("map_664233532", "PGJvZHk+PHN0eWxlPgogICAgICAgIGh0bWwsIGJvZHkgewogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgfQogICAgICAgIGh0bWwsIGJvZHksICNtYXAgewogICAgICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAgICAgIH0KICAgICAgICAuYnVsbGV0LW1hcmtlciB7CiAgICAgICAgICAgIHdpZHRoOiAyMHB4OwogICAgICAgICAgICBoZWlnaHQ6IDIwcHg7CiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC4yKTsKICAgICAgICAgICAgYm9yZGVyOiA0cHggc29saWQgIzAyODFmMjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlOwogICAgICAgIH0KICAgICAgICAucGVybWFuZW50LXRvb2x0aXAgewogICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lOwogICAgICAgICAgICBib3gtc2hhZG93OiBub25lOwogICAgICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgICAgIHBhZGRpbmc6IDZweCAxMnB4OwogICAgICAgICAgICBjb2xvcjogIzI2MjYyNjsKICAgICAgICB9CiAgICAgICAgLnBlcm1hbmVudC10b29sdGlwOmJlZm9yZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmU7CiAgICAgICAgfQogICAgICAgIC5kZy1wb3B1cF9oaWRkZW5fdHJ1ZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrOwogICAgICAgIH0KICAgICAgICAubGVhZmxldC1jb250YWluZXIgLmxlYWZsZXQtcG9wdXAgLmxlYWZsZXQtcG9wdXAtY2xvc2UtYnV0dG9uIHsKICAgICAgICAgICAgdG9wOiAwOwogICAgICAgICAgICByaWdodDogMDsKICAgICAgICAgICAgd2lkdGg6IDIwcHg7CiAgICAgICAgICAgIGhlaWdodDogMjBweDsKICAgICAgICAgICAgZm9udC1zaXplOiAyMHB4OwogICAgICAgICAgICBsaW5lLWhlaWdodDogMTsKICAgICAgICB9CiAgICA8L3N0eWxlPjxkaXYgaWQ9Im1hcCI+PC9kaXY+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9tYXBzLmFwaS4yZ2lzLnJ1LzIuMC9sb2FkZXIuanM/cGtnPWZ1bGwmYW1wO3NraW49bGlnaHQiPjwvc2NyaXB0PjxzY3JpcHQ+KGZ1bmN0aW9uKGUsdCl7dmFyIHI9SlNPTi5wYXJzZShlKSxuPUpTT04ucGFyc2UodCk7ZnVuY3Rpb24gYShlKXtyZXR1cm4gZGVjb2RlVVJJQ29tcG9uZW50KGF0b2IoZSkuc3BsaXQoIiIpLm1hcChmdW5jdGlvbihlKXtyZXR1cm4iJSIrKCIwMCIrZS5jaGFyQ29kZUF0KDApLnRvU3RyaW5nKDE2KSkuc2xpY2UoLTIpfSkuam9pbigiIikpfURHLnRoZW4oZnVuY3Rpb24oKXt2YXIgZT1ERy5tYXAoIm1hcCIse2NlbnRlcjpbbi5sYXQsbi5sb25dLHpvb206bi56b29tfSk7REcuZ2VvSlNPTihyLHtzdHlsZTpmdW5jdGlvbihlKXt2YXIgdCxyLG4sYSxvO3JldHVybntmaWxsQ29sb3I6bnVsbD09PSh0PWUpfHx2b2lkIDA9PT10P3ZvaWQgMDp0LnByb3BlcnRpZXMuZmlsbENvbG9yLGZpbGxPcGFjaXR5Om51bGw9PT0ocj1lKXx8dm9pZCAwPT09cj92b2lkIDA6ci5wcm9wZXJ0aWVzLmZpbGxPcGFjaXR5LGNvbG9yOm51bGw9PT0obj1lKXx8dm9pZCAwPT09bj92b2lkIDA6bi5wcm9wZXJ0aWVzLnN0cm9rZUNvbG9yLHdlaWdodDpudWxsPT09KGE9ZSl8fHZvaWQgMD09PWE/dm9pZCAwOmEucHJvcGVydGllcy5zdHJva2VXaWR0aCxvcGFjaXR5Om51bGw9PT0obz1lKXx8dm9pZCAwPT09bz92b2lkIDA6by5wcm9wZXJ0aWVzLnN0cm9rZU9wYWNpdHl9fSxwb2ludFRvTGF5ZXI6ZnVuY3Rpb24oZSx0KXtyZXR1cm4icmFkaXVzImluIGUucHJvcGVydGllcz9ERy5jaXJjbGUodCxlLnByb3BlcnRpZXMucmFkaXVzKTpERy5tYXJrZXIodCx7aWNvbjpmdW5jdGlvbihlKXtyZXR1cm4gREcuZGl2SWNvbih7aHRtbDoiPGRpdiBjbGFzcz0nYnVsbGV0LW1hcmtlcicgc3R5bGU9J2JvcmRlci1jb2xvcjogIitlKyI7Jz48L2Rpdj4iLGNsYXNzTmFtZToib3ZlcnJpZGUtZGVmYXVsdCIsaWNvblNpemU6WzIwLDIwXSxpY29uQW5jaG9yOlsxMCwxMF19KX0oZS5wcm9wZXJ0aWVzLmNvbG9yKX0pfSxvbkVhY2hGZWF0dXJlOmZ1bmN0aW9uKGUsdCl7ZS5wcm9wZXJ0aWVzLmRlc2NyaXB0aW9uJiZ0LmJpbmRQb3B1cChhKGUucHJvcGVydGllcy5kZXNjcmlwdGlvbikse2Nsb3NlQnV0dG9uOiEwLGNsb3NlT25Fc2NhcGVLZXk6ITB9KSxlLnByb3BlcnRpZXMudGl0bGUmJnQuYmluZFRvb2x0aXAoYShlLnByb3BlcnRpZXMudGl0bGUpLHtwZXJtYW5lbnQ6ITAsb3BhY2l0eToxLGNsYXNzTmFtZToicGVybWFuZW50LXRvb2x0aXAifSl9fSkuYWRkVG8oZSl9KX0pKCdbeyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsiY29sb3IiOiIjMDI4MWYyIiwidGl0bGUiOiIiLCJkZXNjcmlwdGlvbiI6IiIsInpJbmRleCI6MTAwMDAwMDAwMH0sImdlb21ldHJ5Ijp7InR5cGUiOiJQb2ludCIsImNvb3JkaW5hdGVzIjpbNjEuMzE5NjQ1LDU1LjE5ODQ1Ml19LCJpZCI6MzAzfV0nLCd7ImxhdCI6NTUuMTkxMjE2NDUzNTgyNTksImxvbiI6NjEuMzQwNjYxMDQ4ODg5MTcsInpvb20iOjE0fScpPC9zY3JpcHQ+PHNjcmlwdCBhc3luYz0iIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20vZ3RhZy9qcz9pZD1VQS0xNTg4NjYxNjgtMSI+PC9zY3JpcHQ+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPihmdW5jdGlvbihlKXtmdW5jdGlvbiB0KCl7ZGF0YUxheWVyLnB1c2goYXJndW1lbnRzKX13aW5kb3cuZGF0YUxheWVyPXdpbmRvdy5kYXRhTGF5ZXJ8fFtdLHQoImpzIixuZXcgRGF0ZSksdCgiY29uZmlnIixlKSx3aW5kb3cuZ3RhZz10fSkoJ1VBLTE1ODg2NjE2OC0xJyk8L3NjcmlwdD48L2JvZHk+")</script>
+
+                </div>
+                <div class="map__content">
+                    <div class="map__title">
+                        <h2>Расположение нашего офиса </h2>
+                    </div>
+                    <div class="map__contact">
+                        <form class="map__form" action="">
+                            <input class="map__email" type="email" value="Введите свой email">
+                            <input class="map__submit" type="submit" value="Отправить">
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__wrapper">
-            <!---Виталий-->
+        <div class="footer__wrapper section__wrapper">
+            <ul>
+                <li><a href= "#">Рейтинги</a></li>
+                <li><a href= "#">Статьи</a></li>
+                <li><a href= "#">Аналитика</a></li>
+                <li><a href= "#" >Электронные услуги</a></li>
+            </ul>
+            <div id= "foote">
+                <p>Главная | <a href= "#"> Ссылка </a> | <a href= "#"> Ссылка </a> | <a href= "#">Ссылка</a> | </p>
+                <p>Copyright © 2021/22. Все права защищены. </p>
+            </div>
         </div>
     </footer>
 </body>
