@@ -1,41 +1,25 @@
-let lbtn = document.getElementById("apartmentOneLeft");
-let rbtn = document.getElementById("apartmentOneRight");
-let img = document.getElementById("apartmentOneImg");
-rbtn.addEventListener("click", function(){
-    let num = img.getAttribute("data-numimg");
-    if(num==1){
-        img.setAttribute("src", "img/apartment_one2.jpg");
-        img.setAttribute("data-numimg", 2);
+let btnPrev = document.getElementById("apartmentOneLeft");
+let bnNext = document.getElementById("apartmentOneRight");
+let img = document.getElementById("apartmentOneSlider");
+let slider = ["img/apartments__img/a1/1.jpg", 
+"img/apartments__img/a1/2.jpg", 
+"img/apartments__img/a1/3.jpg", 
+"img/apartments__img/a1/4.jpg", 
+"img/apartments__img/a1/5.jpg"];
+let current = 0 ;
+bnNext.addEventListener("click", moveSlideNext);
+btnPrev.addEventListener("click", moveSlidePrev)
+function moveSlideNext(){
+    current++;
+    if(current>=slider.length){
+        current=0;
     }
-    else if(num==2){
-        img.setAttribute("src", "img/apartment_one3.jpg");
-        img.setAttribute("data-numimg", 3);
+    img.style.backgroundImage="url(" + slider[current] + ")";
+}
+function moveSlidePrev(){
+    current--;
+    if(current<0){
+        current=slider.length-1;
     }
-    else if(num==3){
-        img.setAttribute("src", "img/apartment_one4.jpg");
-        img.setAttribute("data-numimg", 4);
-    }
-    else if(num==4){
-        img.setAttribute("src", "img/apartment_one1.jpg");
-        img.setAttribute("data-numimg", 1);
-    }
-} );
-lbtn.addEventListener("click", function(){
-    let num = img.getAttribute("data-numimg");
-    if(num==1){
-        img.setAttribute("src", "img/apartment_one4.jpg");
-        img.setAttribute("data-numimg", 4);
-    }
-    else if(num==4){
-        img.setAttribute("src", "img/apartment_one3.jpg");
-        img.setAttribute("data-numimg", 3);
-    }
-    else if(num==3){
-        img.setAttribute("src", "img/apartment_one2.jpg");
-        img.setAttribute("data-numimg", 2);
-    }
-    else if(num==2){
-        img.setAttribute("src", "img/apartment_one1.jpg");
-        img.setAttribute("data-numimg", 1);
-    }
-} );
+    img.style.backgroundImage="url(" + slider[current] + ")";
+}

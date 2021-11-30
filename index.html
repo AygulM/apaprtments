@@ -3,14 +3,16 @@
 <head>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <!-----
     <script defer type="text/javascript" src="js/script.js"></script>
+    --->
     <!---font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&family=Vollkorn&display=swap" rel="stylesheet">
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
     <meta name="keywords" content="аренда, квартиры, Челябинск">
     <meta name="description" content="Лучший сервис по аренде квартир в г. Челябинске">
     <meta property="og:title" content="Аренда квартир">
@@ -26,7 +28,7 @@
 <body>
     <header class="header"><!---Айгуль-->
         <div class="header__wrapper section__wrapper">
-            <div class="header__logo">
+            <div class="header__logo logo">
                 <a href="index.html">
                     <div class="logo__parts">
                         <svg class="logo__part logo__part--one" width="11" height="36" viewBox="0 0 11 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +50,7 @@
                         <h1 class="header__title">Аренда квартир</h1>
                         <p class="header__text">Лучший сервис по аренде квартир в г. Челябинске</p>
                         <div class="header__video">
-                            <a class="video__button" href="#">
+                            <a class="video__button" href="#" >
                                 <div class="video__b">
                                     <svg class="video__part video__ellipse" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="28" cy="28" r="28" fill="white"/>
@@ -65,7 +67,7 @@
                 </div>
                 <div class="header__part--two"></div>
             </div>
-            <div class="header__filters">
+            <div class="filters header__filters">
                 <div class="filers__items">
                     <div class="filter__item filter__1">
                         <div class="filter__icon filter__icon--loc">
@@ -130,7 +132,7 @@
                             <svg class="price__icon" xmlns="http://www.w3.org/2000/svg" height="23" viewBox="0 0 1792 1792" width="24">
                                 <path d="M1299 565q0-100-65-162t-171-62h-320v448h320q106 0 171-62t65-162zm237 0q0 193-126.5 315t-326.5 122h-340v118h505q14 0 23 9t9 23v128q0 14-9 23t-23 9h-505v192q0 14-9.5 23t-22.5 9h-167q-14 0-23-9t-9-23v-192h-224q-14 0-23-9t-9-23v-128q0-14 9-23t23-9h224v-118h-224q-14 0-23-9t-9-23v-149q0-13 9-22.5t23-9.5h224v-629q0-14 9-23t23-9h539q200 0 326.5 122t126.5 315z" fill="#6E9773"/>
                             </svg>
-                            <input class="price__filter f__icon--p" type="text" value="Цена">
+                            <input class="price__filter f__icon--p" type="text" placeholder="Цена">
                         </div>
                     </div>
                 </div>
@@ -149,28 +151,28 @@
         <section class="section catalog">
             <div class="section__wrapper catalog__wrapper">
                 <!---Айгуль-->
-                <h2 class="catalog__title">Квартиры</h2>
+                <h2 class="section__title catalog__title">Квартиры</h2>
                 <div class="catalog__main">
                     <div class="catalog__button catalog__button--left">
-                        <button class="button__catalog" type="button">
+                        <button class="button__catalog" id="PrevBtn" type="button">
                             <svg class="c__buton" width="35" height="52" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
                                 <polygon points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 " fill="#6E9773"/>
                             </svg>
                         </button>            
                     </div>
                     <div class="catalog__button catalog__button--right">
-                        <button class="button__catalog" type="button">
+                        <button class="button__catalog" id="NextBtn" type="button">
                             <svg class="c__buton" width="35" height="52" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve">
                                 <polygon points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 " fill="#6E9773"/>
                             </svg>
                         </button>
                     </div>
-                    <div class="catalog__items">
+                    <div class="catalog__items"  id="CatalogItemSlider">
                         <div class="catalog__item">
                             <div class="catalog__img catalog__img--1"></div>
                             <div class="catalog__content">
                                 <div class="catlog__address">Челябинск, Молодогвардейев 77</div>
-                                <a class="catalog__p--a" href="apartment__one.html"><p class="catalog__p">Квартира 1 комнатная</p></a>
+                                <a class="catalog__p--a" href="apartment__1.html" ><p class="catalog__p">Квартира 1 комнатная</p></a>
                                 <div class="catalog__info">
                                     <div class="catalog__info--item">
                                         <p class="catalog__sqm">36,5 кв.м</p>
@@ -182,11 +184,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="catalog__item">
+                        <div class="catalog__item" >
                             <div class="catalog__img catalog__img--2"></div>
                             <div class="catalog__content">
                                 <div class="catlog__address">Челябинск, Солнечная 15</div>
-                                <a class="catalog__p--a" href="apartment__one.html"><p class="catalog__p">Квартира 2-х комнатная</p></a>
+                                <a class="catalog__p--a" href="apartment__1.html" ><p class="catalog__p">Квартира 2-х комнатная</p></a>
                                 <div class="catalog__info">
                                     <div class="catalog__info--item">
                                         <p class="catalog__sqm">50 кв.м</p>
@@ -198,11 +200,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="catalog__item">
+                        <div class="catalog__item" >
                             <div class="catalog__img catalog__img--3"></div>
                             <div class="catalog__content">
                                 <div class="catlog__address">Челябинск, Проспект Ленина 125</div>
-                                <a class="catalog__p--a" href="apartment__one.html"><p class="catalog__p">Квартира 3-х комнатная</p></a>
+                                <a class="catalog__p--a" href="apartment__1.html" ><p class="catalog__p">Квартира 3-х комнатная</p></a>
                                 <div class="catalog__info">
                                     <div class="catalog__info--item">
                                         <p class="catalog__sqm">60 кв.м</p>
@@ -217,7 +219,7 @@
                     </div>
                 </div>
                 <div class="catalog__all">
-                    <a class="catalog__all--button" href="#">
+                    <a class="catalog__all--button" href="apartments__catalog.html" >
                         <div class="catalog__all--contain">
                             Посмотреть всё
                         </div>
@@ -228,77 +230,84 @@
         <section class="section news">
             <div class="section__wrapper news__wrapper">
                 <!---Лёня-->
-                <div class="news__item">
-                    <div class="news__content--one">
-                        <div class="news__part-one"></div>
-                        <div class="news__part-two">
-                            <h2>Заголовок 1</h2>
-                            <p>Новость новость новость новость</p>
+                <h2 class="section__title news__title">Новости</h2>
+                <div class="news__items">
+                    <div class="news__item">
+                        <div class="news__content--one">
+                            <div class="news__part-one"></div>
+                            <div class="news__part-two">
+                                <h2>Заголовок 1</h2>
+                                <p>Новость новость новость новость</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="news__item_2">
-                    <div class="news__content--two">
-                        <div class="news__part-one-2"></div>
-                        <div class="news__part-two">
-                            <h2>Заголовок 1</h2>
-                            <p>Новость новость новость новость</p>
+                    <div class="news__item_2">
+                        <div class="news__content--two">
+                            <div class="news__part-one-2"></div>
+                            <div class="news__part-two">
+                                <h2>Заголовок 1</h2>
+                                <p>Новость новость новость новость</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="news__content--two">
-                        <div class="news__part-one-2"></div>
-                        <div class="news__part-two">
-                            <h2>Заголовок 1</h2>
-                            <p>Новость новость новость новость</p>
+                        <div class="news__content--two">
+                            <div class="news__part-one-2"></div>
+                            <div class="news__part-two">
+                                <h2>Заголовок 1</h2>
+                                <p>Новость новость новость новость</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section class="section realtor">
-            <div class="section__wrapper realtor__wrapper">
+        <section class="section realtors">
+            <div class="section__wrapper realtors__wrapper">
                 <!---Вениамин-->
-                <div class="realtor__one"><a href="realtor.html">Realtor 1</a></div>
+                <h2 class="section__title realtors__title">realtor</h2>
+                <div class="realtors__one"><a href="realtor.html" >Realtor 1</a></div>
             </div>
         </section>
         <section class="section reviews">
             <div class="section__wrapper reviews__wrapper">
                 <!---Ксюша-->
-                <div class="review__card">
-                    <div class="reviews__item reviews__whiteBack">                            
-                        <div class="reviews__text--name reviews__blackText">
-                            <h3 >Имя №1</h3>                       
+                <h2 class="section__title reviews__title">Отзывы</h2>
+                <div class="reviews__cards">
+                    <div class="review__card">
+                        <div class="reviews__item reviews__whiteBack">                            
+                            <div class="reviews__text--name reviews__blackText">
+                                <h3 >Имя №1</h3>                       
+                            </div>
+                            <div class="reviews__text">
+                                Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                            </div>                    
                         </div>
-                        <div class="reviews__text">
-                            Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
-                        </div>                    
+                        <div class="reviews__img reviews__img--one"></div> 
                     </div>
-                    <div class="reviews__img reviews__img--one"></div> 
-                </div>
-                <div class="review__card">
-                    <div class="reviews__item reviews__greenback">                           
-                        <div class="reviews__text--name">
-                            <h3 >Имя №2</h3>
+                    <div class="review__card">
+                        <div class="reviews__item reviews__greenback">                           
+                            <div class="reviews__text--name">
+                                <h3 >Имя №2</h3>
+                            </div>
+                            <div class="reviews__text reviews__text__white">
+                                Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                            </div>
                         </div>
-                        <div class="reviews__text reviews__text__white">
-                            Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
-                        </div>
+                        <div class="reviews__img reviews__img--two">
+                        </div>   
                     </div>
-                    <div class="reviews__img reviews__img--two">
-                    </div>   
-                </div>
-                <div class="review__card">
-                    <div class="reviews__item reviews__whiteBack">                           
-                        <div class="reviews__text--name reviews__blackText">
-                            <h3>Имя №3</h3>
+                    <div class="review__card">
+                        <div class="reviews__item reviews__whiteBack">                           
+                            <div class="reviews__text--name reviews__blackText">
+                                <h3>Имя №3</h3>
+                            </div>
+                            <div class="reviews__text">
+                                Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
+                            </div>
                         </div>
-                        <div class="reviews__text">
-                            Значимость этих проблем настолько очевидна, что укрепление и развитие структуры в значительной степени обуславливает создание соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
-                        </div>
+                        <div class="reviews__img">
+                        </div>    
                     </div>
-                    <div class="reviews__img">
-                    </div>    
                 </div>
             </div>
         </section>
@@ -306,7 +315,6 @@
             <div class="section__wrapper map__wrapper">
                 <div class="map__bacgr">
                     <iframe class="map__doublegis" id="map_664233532" frameborder="0"  sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe><script type="text/javascript">(function(e,t){var r=document.getElementById(e);r.contentWindow.document.open(),r.contentWindow.document.write(atob(t)),r.contentWindow.document.close()})("map_664233532", "PGJvZHk+PHN0eWxlPgogICAgICAgIGh0bWwsIGJvZHkgewogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgfQogICAgICAgIGh0bWwsIGJvZHksICNtYXAgewogICAgICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAgICAgIH0KICAgICAgICAuYnVsbGV0LW1hcmtlciB7CiAgICAgICAgICAgIHdpZHRoOiAyMHB4OwogICAgICAgICAgICBoZWlnaHQ6IDIwcHg7CiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC4yKTsKICAgICAgICAgICAgYm9yZGVyOiA0cHggc29saWQgIzAyODFmMjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlOwogICAgICAgIH0KICAgICAgICAucGVybWFuZW50LXRvb2x0aXAgewogICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lOwogICAgICAgICAgICBib3gtc2hhZG93OiBub25lOwogICAgICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgICAgIHBhZGRpbmc6IDZweCAxMnB4OwogICAgICAgICAgICBjb2xvcjogIzI2MjYyNjsKICAgICAgICB9CiAgICAgICAgLnBlcm1hbmVudC10b29sdGlwOmJlZm9yZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmU7CiAgICAgICAgfQogICAgICAgIC5kZy1wb3B1cF9oaWRkZW5fdHJ1ZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrOwogICAgICAgIH0KICAgICAgICAubGVhZmxldC1jb250YWluZXIgLmxlYWZsZXQtcG9wdXAgLmxlYWZsZXQtcG9wdXAtY2xvc2UtYnV0dG9uIHsKICAgICAgICAgICAgdG9wOiAwOwogICAgICAgICAgICByaWdodDogMDsKICAgICAgICAgICAgd2lkdGg6IDIwcHg7CiAgICAgICAgICAgIGhlaWdodDogMjBweDsKICAgICAgICAgICAgZm9udC1zaXplOiAyMHB4OwogICAgICAgICAgICBsaW5lLWhlaWdodDogMTsKICAgICAgICB9CiAgICA8L3N0eWxlPjxkaXYgaWQ9Im1hcCI+PC9kaXY+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9tYXBzLmFwaS4yZ2lzLnJ1LzIuMC9sb2FkZXIuanM/cGtnPWZ1bGwmYW1wO3NraW49bGlnaHQiPjwvc2NyaXB0PjxzY3JpcHQ+KGZ1bmN0aW9uKGUsdCl7dmFyIHI9SlNPTi5wYXJzZShlKSxuPUpTT04ucGFyc2UodCk7ZnVuY3Rpb24gYShlKXtyZXR1cm4gZGVjb2RlVVJJQ29tcG9uZW50KGF0b2IoZSkuc3BsaXQoIiIpLm1hcChmdW5jdGlvbihlKXtyZXR1cm4iJSIrKCIwMCIrZS5jaGFyQ29kZUF0KDApLnRvU3RyaW5nKDE2KSkuc2xpY2UoLTIpfSkuam9pbigiIikpfURHLnRoZW4oZnVuY3Rpb24oKXt2YXIgZT1ERy5tYXAoIm1hcCIse2NlbnRlcjpbbi5sYXQsbi5sb25dLHpvb206bi56b29tfSk7REcuZ2VvSlNPTihyLHtzdHlsZTpmdW5jdGlvbihlKXt2YXIgdCxyLG4sYSxvO3JldHVybntmaWxsQ29sb3I6bnVsbD09PSh0PWUpfHx2b2lkIDA9PT10P3ZvaWQgMDp0LnByb3BlcnRpZXMuZmlsbENvbG9yLGZpbGxPcGFjaXR5Om51bGw9PT0ocj1lKXx8dm9pZCAwPT09cj92b2lkIDA6ci5wcm9wZXJ0aWVzLmZpbGxPcGFjaXR5LGNvbG9yOm51bGw9PT0obj1lKXx8dm9pZCAwPT09bj92b2lkIDA6bi5wcm9wZXJ0aWVzLnN0cm9rZUNvbG9yLHdlaWdodDpudWxsPT09KGE9ZSl8fHZvaWQgMD09PWE/dm9pZCAwOmEucHJvcGVydGllcy5zdHJva2VXaWR0aCxvcGFjaXR5Om51bGw9PT0obz1lKXx8dm9pZCAwPT09bz92b2lkIDA6by5wcm9wZXJ0aWVzLnN0cm9rZU9wYWNpdHl9fSxwb2ludFRvTGF5ZXI6ZnVuY3Rpb24oZSx0KXtyZXR1cm4icmFkaXVzImluIGUucHJvcGVydGllcz9ERy5jaXJjbGUodCxlLnByb3BlcnRpZXMucmFkaXVzKTpERy5tYXJrZXIodCx7aWNvbjpmdW5jdGlvbihlKXtyZXR1cm4gREcuZGl2SWNvbih7aHRtbDoiPGRpdiBjbGFzcz0nYnVsbGV0LW1hcmtlcicgc3R5bGU9J2JvcmRlci1jb2xvcjogIitlKyI7Jz48L2Rpdj4iLGNsYXNzTmFtZToib3ZlcnJpZGUtZGVmYXVsdCIsaWNvblNpemU6WzIwLDIwXSxpY29uQW5jaG9yOlsxMCwxMF19KX0oZS5wcm9wZXJ0aWVzLmNvbG9yKX0pfSxvbkVhY2hGZWF0dXJlOmZ1bmN0aW9uKGUsdCl7ZS5wcm9wZXJ0aWVzLmRlc2NyaXB0aW9uJiZ0LmJpbmRQb3B1cChhKGUucHJvcGVydGllcy5kZXNjcmlwdGlvbikse2Nsb3NlQnV0dG9uOiEwLGNsb3NlT25Fc2NhcGVLZXk6ITB9KSxlLnByb3BlcnRpZXMudGl0bGUmJnQuYmluZFRvb2x0aXAoYShlLnByb3BlcnRpZXMudGl0bGUpLHtwZXJtYW5lbnQ6ITAsb3BhY2l0eToxLGNsYXNzTmFtZToicGVybWFuZW50LXRvb2x0aXAifSl9fSkuYWRkVG8oZSl9KX0pKCdbeyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsiY29sb3IiOiIjMDI4MWYyIiwidGl0bGUiOiIiLCJkZXNjcmlwdGlvbiI6IiIsInpJbmRleCI6MTAwMDAwMDAwMH0sImdlb21ldHJ5Ijp7InR5cGUiOiJQb2ludCIsImNvb3JkaW5hdGVzIjpbNjEuMzE5NjQ1LDU1LjE5ODQ1Ml19LCJpZCI6MzAzfV0nLCd7ImxhdCI6NTUuMTkxMjE2NDUzNTgyNTksImxvbiI6NjEuMzQwNjYxMDQ4ODg5MTcsInpvb20iOjE0fScpPC9zY3JpcHQ+PHNjcmlwdCBhc3luYz0iIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20vZ3RhZy9qcz9pZD1VQS0xNTg4NjYxNjgtMSI+PC9zY3JpcHQ+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPihmdW5jdGlvbihlKXtmdW5jdGlvbiB0KCl7ZGF0YUxheWVyLnB1c2goYXJndW1lbnRzKX13aW5kb3cuZGF0YUxheWVyPXdpbmRvdy5kYXRhTGF5ZXJ8fFtdLHQoImpzIixuZXcgRGF0ZSksdCgiY29uZmlnIixlKSx3aW5kb3cuZ3RhZz10fSkoJ1VBLTE1ODg2NjE2OC0xJyk8L3NjcmlwdD48L2JvZHk+")</script>
-
                 </div>
                 <div class="map__content">
                     <div class="map__title">

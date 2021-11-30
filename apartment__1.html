@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script defer type="text/javascript" src="js/script.js"></script><!---defer – отложенная загрузка-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&family=Vollkorn&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="аренда, квартиры, Челябинск">
+    <meta name="description" content="Лучший сервис по аренде квартир в г. Челябинске">
+    <meta property="og:title" content="Аренда квартир">
+    <meta property="og:site_name" content="ChelRent">
+    <meta property="og:url" content=""><!----->
+    <meta property="og:description" content="Лучший сервис по аренде квартир в г. Челябинске">
+    <meta property="og:image" content="https://sun9-34.userapi.com/impg/pw28LSRQY1vaZb09FO3gWpGt-mV5JmzcIJleug/eqLpp4uFyuk.jpg?size=338x330&quality=96&sign=0f3265a8aa09be98cbfc454f84686dd3&type=album">
+    <link rel="icon" type="image/ico" sizes="32x32" href="icons/favicon.ico">
+    <link rel="icon" type="image/ico" sizes="16x16" href="icons/favicon.ico">
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <title>Квартиры</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__wrapper section__wrapper">
+            <div class="header__logo">
+                <a href="index.html">
+                    <div class="logo__parts">
+                        <svg class="logo__part logo__part--one" width="11" height="36" viewBox="0 0 11 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0L11 6.96774V36H0V0Z" fill="#0D3A2E"/>
+                        </svg>   
+                        <svg class="logo__part logo__part--two" width="10" height="40" viewBox="0 0 10 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0L10 6V40H0V0Z" fill="#7DB383"/>
+                        </svg>    
+                        <svg class="logo__part logo__part--three" width="11" height="24" viewBox="0 0 11 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0L11 5.76V24H0V0Z" fill="#FFB903"/>
+                        </svg>                    
+                    </div>
+                    <div class="logo__title">ChelRent</div>
+                </a>
+            </div>
+            <div class="newheader__main">
+                <div class="newheader__part--one">
+                    <div class="newheader__content">
+                        <h1 class="newheader__title">Аренда квартир</h1>
+                    </div>
+                </div>
+                <div class="newheader__part--two apartmen__part--two"></div><!--поменять apartmen__part--two на свой класс и поставить свой фон---->
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section apartmentone">
+            <div class="apartmentone__wrapper section__wrapper">
+                <div class="apartmentone__content">
+                    <div class="apartmentone__img--slider">
+                        <div class="apartmentone__button apartmentone__button--left">
+                            <button class="button__apartment" id="apartmentOneLeft" type="button">
+                                <svg class="a1__buton"  width="35" height="52" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+                                    <polygon points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 " fill="#B5B8B1"/>
+                                </svg>
+                            </button>             
+                        </div>
+                        <div class="apartmentone__button apartmentone__button--right">
+                            <button class="button__apartment" id="apartmentOneRight" type="button">
+                                <svg class="a1__buton" width="35" height="52" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve">
+                                    <polygon points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 " fill="#B5B8B1"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="apartmentone__slider" id="apartmentOneSlider"></div>
+                    </div>
+                    <div class="apartmentone__info">
+                        <h2 class="apartmentone__title">Квартира 1 комнатная</h2>
+                        <div class="apartmentone__address">Челябинск, Молодогвардейев 77</div>
+                        <div class="apartmentone__info--dop">
+                            <p class="apartmentone__sqm">36,5 кв.м</p>
+                            <div class="apartmentone__price">22 500 ₽</div>
+                        </div>
+                        <a class="connect__realtor" href="#">Связаться с риелтором</a>
+                    </div>
+                </div>
+                <div class="apartmentone__description">
+                    <h3 class="description__title">Описание</h3>
+                    <p class="description__change">Изменено: 29.11.21</p>
+                    <p>
+                        Сдам уютную квартиру в аренду на длительный срок! Находится в элитном доме ул.Университетская Набережная д 28! Отличное расположение, вид на Миасс, солнечная сторона, транспортная доступность! 
+                        Квартира с современным ремонтом, с большой кухней-гостиной, спальней и двумя санузлами! Сантехника фирмы Джакузи, теплый пол на кухне и в ванной! 
+                        Дом с подземной парковкой, закрытая территория! 
+                        Условия аренды:на длительный срок от года, один/два человека, оплата за три месяца вперед. Арендная плата составляет 50 тыс.р. в месяц - все включено!
+                        Звоните, приезжайте смотреть!
+                       <br><br> Доп. описание: санузел раздельный, , пластиковые окна, в доме есть: детская площадка, закрытый двор, ворота, охрана, видеонаблюдение, подземный паркинг, гостевой паркинг, лифт пассажирский, лифт грузовой, современный ремонт, также имеются: телефон, интернет, кабельное телевидение, счетчики холодной и горячей воды, домофон, железная дверь, телевидение,
+                       <br> Возможно заселиться с домашним питомцем в клетке и с рыбками. 
+                       <br> Вся инфраструктура в шаговой доступности: банки, кафе, медицинские центры, различные продуктовые и другие магазины. В шаговой доступности река Миасс и исторический центр города.
+                    </p>
+                </div>
+                <div class="apartmentone__characteristic">
+                    <h3 class="characteristic__title">Характеристики</h3>
+                    <table class="characteristic__table">
+                        <tr><td>Общая площадь</td><td>Ячейка 4</td></tr>
+                        <tr><td>Ремонт</td><td>Современный ремонт</td></tr>
+                        <tr><td>Год постройки</td><td>2015</td></tr>
+                        <tr><td>Этаж/Этажность</td><td>9 из 12</td></tr>
+                        <tr><td>Стены</td><td>Кирпичные</td></tr>
+                    </table>
+                </div>
+                <div class="apartmentone__map">
+                    <iframe class="a__map" id="map_717535399" frameborder="0" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe><script type="text/javascript">(function(e,t){var r=document.getElementById(e);r.contentWindow.document.open(),r.contentWindow.document.write(atob(t)),r.contentWindow.document.close()})("map_717535399", "PGJvZHk+PHN0eWxlPgogICAgICAgIGh0bWwsIGJvZHkgewogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgfQogICAgICAgIGh0bWwsIGJvZHksICNtYXAgewogICAgICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAgICAgIH0KICAgICAgICAuYnVsbGV0LW1hcmtlciB7CiAgICAgICAgICAgIHdpZHRoOiAyMHB4OwogICAgICAgICAgICBoZWlnaHQ6IDIwcHg7CiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC4yKTsKICAgICAgICAgICAgYm9yZGVyOiA0cHggc29saWQgIzAyODFmMjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlOwogICAgICAgIH0KICAgICAgICAucGVybWFuZW50LXRvb2x0aXAgewogICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lOwogICAgICAgICAgICBib3gtc2hhZG93OiBub25lOwogICAgICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgICAgIHBhZGRpbmc6IDZweCAxMnB4OwogICAgICAgICAgICBjb2xvcjogIzI2MjYyNjsKICAgICAgICB9CiAgICAgICAgLnBlcm1hbmVudC10b29sdGlwOmJlZm9yZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmU7CiAgICAgICAgfQogICAgICAgIC5kZy1wb3B1cF9oaWRkZW5fdHJ1ZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrOwogICAgICAgIH0KICAgICAgICAubGVhZmxldC1jb250YWluZXIgLmxlYWZsZXQtcG9wdXAgLmxlYWZsZXQtcG9wdXAtY2xvc2UtYnV0dG9uIHsKICAgICAgICAgICAgdG9wOiAwOwogICAgICAgICAgICByaWdodDogMDsKICAgICAgICAgICAgd2lkdGg6IDIwcHg7CiAgICAgICAgICAgIGhlaWdodDogMjBweDsKICAgICAgICAgICAgZm9udC1zaXplOiAyMHB4OwogICAgICAgICAgICBsaW5lLWhlaWdodDogMTsKICAgICAgICB9CiAgICA8L3N0eWxlPjxkaXYgaWQ9Im1hcCI+PC9kaXY+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9tYXBzLmFwaS4yZ2lzLnJ1LzIuMC9sb2FkZXIuanM/cGtnPWZ1bGwmYW1wO3NraW49bGlnaHQiPjwvc2NyaXB0PjxzY3JpcHQ+KGZ1bmN0aW9uKGUsdCl7dmFyIHI9SlNPTi5wYXJzZShlKSxuPUpTT04ucGFyc2UodCk7ZnVuY3Rpb24gYShlKXtyZXR1cm4gZGVjb2RlVVJJQ29tcG9uZW50KGF0b2IoZSkuc3BsaXQoIiIpLm1hcChmdW5jdGlvbihlKXtyZXR1cm4iJSIrKCIwMCIrZS5jaGFyQ29kZUF0KDApLnRvU3RyaW5nKDE2KSkuc2xpY2UoLTIpfSkuam9pbigiIikpfURHLnRoZW4oZnVuY3Rpb24oKXt2YXIgZT1ERy5tYXAoIm1hcCIse2NlbnRlcjpbbi5sYXQsbi5sb25dLHpvb206bi56b29tfSk7REcuZ2VvSlNPTihyLHtzdHlsZTpmdW5jdGlvbihlKXt2YXIgdCxyLG4sYSxvO3JldHVybntmaWxsQ29sb3I6bnVsbD09PSh0PWUpfHx2b2lkIDA9PT10P3ZvaWQgMDp0LnByb3BlcnRpZXMuZmlsbENvbG9yLGZpbGxPcGFjaXR5Om51bGw9PT0ocj1lKXx8dm9pZCAwPT09cj92b2lkIDA6ci5wcm9wZXJ0aWVzLmZpbGxPcGFjaXR5LGNvbG9yOm51bGw9PT0obj1lKXx8dm9pZCAwPT09bj92b2lkIDA6bi5wcm9wZXJ0aWVzLnN0cm9rZUNvbG9yLHdlaWdodDpudWxsPT09KGE9ZSl8fHZvaWQgMD09PWE/dm9pZCAwOmEucHJvcGVydGllcy5zdHJva2VXaWR0aCxvcGFjaXR5Om51bGw9PT0obz1lKXx8dm9pZCAwPT09bz92b2lkIDA6by5wcm9wZXJ0aWVzLnN0cm9rZU9wYWNpdHl9fSxwb2ludFRvTGF5ZXI6ZnVuY3Rpb24oZSx0KXtyZXR1cm4icmFkaXVzImluIGUucHJvcGVydGllcz9ERy5jaXJjbGUodCxlLnByb3BlcnRpZXMucmFkaXVzKTpERy5tYXJrZXIodCx7aWNvbjpmdW5jdGlvbihlKXtyZXR1cm4gREcuZGl2SWNvbih7aHRtbDoiPGRpdiBjbGFzcz0nYnVsbGV0LW1hcmtlcicgc3R5bGU9J2JvcmRlci1jb2xvcjogIitlKyI7Jz48L2Rpdj4iLGNsYXNzTmFtZToib3ZlcnJpZGUtZGVmYXVsdCIsaWNvblNpemU6WzIwLDIwXSxpY29uQW5jaG9yOlsxMCwxMF19KX0oZS5wcm9wZXJ0aWVzLmNvbG9yKX0pfSxvbkVhY2hGZWF0dXJlOmZ1bmN0aW9uKGUsdCl7ZS5wcm9wZXJ0aWVzLmRlc2NyaXB0aW9uJiZ0LmJpbmRQb3B1cChhKGUucHJvcGVydGllcy5kZXNjcmlwdGlvbikse2Nsb3NlQnV0dG9uOiEwLGNsb3NlT25Fc2NhcGVLZXk6ITB9KSxlLnByb3BlcnRpZXMudGl0bGUmJnQuYmluZFRvb2x0aXAoYShlLnByb3BlcnRpZXMudGl0bGUpLHtwZXJtYW5lbnQ6ITAsb3BhY2l0eToxLGNsYXNzTmFtZToicGVybWFuZW50LXRvb2x0aXAifSl9fSkuYWRkVG8oZSl9KX0pKCdbeyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsiY29sb3IiOiIjMDI4MWYyIiwidGl0bGUiOiIiLCJkZXNjcmlwdGlvbiI6IiIsInpJbmRleCI6MTAwMDAwMDAwMH0sImdlb21ldHJ5Ijp7InR5cGUiOiJQb2ludCIsImNvb3JkaW5hdGVzIjpbNjEuMzI5ODA4LDU1LjE4NDc0N119LCJpZCI6NjI4fV0nLCd7ImxhdCI6NTUuMTg1MTQwNTQyOTkxNTIsImxvbiI6NjEuMzM1MDE3NjgxMTIxODMsInpvb20iOjE1fScpPC9zY3JpcHQ+PHNjcmlwdCBhc3luYz0iIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20vZ3RhZy9qcz9pZD1VQS0xNTg4NjYxNjgtMSI+PC9zY3JpcHQ+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPihmdW5jdGlvbihlKXtmdW5jdGlvbiB0KCl7ZGF0YUxheWVyLnB1c2goYXJndW1lbnRzKX13aW5kb3cuZGF0YUxheWVyPXdpbmRvdy5kYXRhTGF5ZXJ8fFtdLHQoImpzIixuZXcgRGF0ZSksdCgiY29uZmlnIixlKSx3aW5kb3cuZ3RhZz10fSkoJ1VBLTE1ODg2NjE2OC0xJyk8L3NjcmlwdD48L2JvZHk+")</script>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper section__wrapper">
+            <!---Виталий-->
+            <ul>
+                <li><a href= "#">Рейтинги</a></li>
+                <li><a href= "#">Статьи</a></li>
+                <li><a href= "#">Аналитика</a></li>
+                <li><a href= "#" >Электронные услуги</a></li>
+            </ul>
+            <div id= "foote">
+                <p>Главная | <a href= "#"> Ссылка </a> | <a href= "#"> Ссылка </a> | <a href= "#">Ссылка</a> | </p>
+                <p>Copyright © 2021/22. Все права защищены. </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

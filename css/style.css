@@ -133,13 +133,14 @@ a{
 .video__button:hover .video__p:hover{
     color: #6E9773;
 }
-.header__filters{
+.filters{
     position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     width: 1000px;
     height: 100px;
+    
     margin-left: 140px;
     margin-top: -142px;
     background-color: lightcyan;
@@ -188,6 +189,7 @@ a{
 .filers__items{
     display: flex;
     width: 800px;
+    padding-bottom: 0;
 }
 .filter__item {
     position: relative;
@@ -232,33 +234,39 @@ a{
     color: #6E9773;
 }
 @media (max-width:375px){
-    .header {
+    .section__wrapper{
         width: 100%;
-        margin-bottom: 120px;
+    }
+    .news__wrapper, .news, .realtor__wrapper, .realtor, .footer{
+        display: none;
+    }
+
+    .header {
+        margin-bottom: 30px;
     }
     .header__logo{
-        margin: 0 auto;
         margin-top: 15px;
-        margin-bottom: -105px;
+        margin-bottom: -85px;
     }
     .header__main{
         display: flex;
         flex-wrap: wrap;
         height: 100%;
+        width: 100%;
     }
     .header__part--one{
         width: 100%;
-        height: 500px;
+        height: 470px;
         order: 1;
-        background-color: honeydew;
         border-radius: 50px;
+        background: #e4f5ef;
     }
     .header__text{
         display: none;
     }
     .header__part--two{
         width: 100%;
-        height: 380px;
+        height: 300px;
         background-size: cover;
         background-position: bottom;
         margin-bottom: -50px;
@@ -269,38 +277,48 @@ a{
         padding-left: 0;
     }
     .header__title{
-        margin-top: -155px;
+        margin-top: -0;
         padding-top: 0;
         margin-bottom: 0;
         font-size: 35px;
         line-height: 80px;
         text-align: center;
-        color: black;/*временно*/
     }
     .header__video{
         display: none;
+    }
+    .filters{
+        flex-wrap: wrap;
+        width: 100%;
+        height: 400px;
+        margin: 0 auto;
+        margin-left: 0;
+        margin-top: -400px;
+        border-radius: 50px;
+        background-color: #e4f5ef;
     }
     .filers__items{
         width: 90%;
         height: 200px;
         margin: 0 auto;
-        border: solid green;
-    }
-    .header__filters{
         flex-wrap: wrap;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .filter__item {
         width: 100%;
-        height: 500px;
-        margin: 0 auto;
+        height: 44px;
+        margin-top: 15px;
+        margin-right: 0;
+    }
+    .filter__1{
         margin-left: 0;
-        margin-top: -500px;
-        border-radius: 50px;
     }
     .filter__search{
         position: relative;
         width: 80%;
         height: 50px;
         margin: 0 auto;
-        border: solid green
     }
     .search__button{
         width: 100%;
@@ -309,14 +327,29 @@ a{
         line-height: 24px;
         padding-left: 0;
     }
+    .icon__magnifier, .search__icon{
+        width: 19px;
+        height: 19px;
+    }
+    .search__icon{
+        top: 15px;
+        left: 85px;
+    }
+}
+/**/
+.section__title{
+    margin-bottom: 25px;
+    text-align: left;
 }
 /*-----------------------Лёня-----------------------*/
 /*--------------NEWS---------------------------*/
 .news__wrapper{
+    padding-bottom: 72px;
+}
+.news__items{
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    padding-bottom: 72px;
 }
 .news__item, .news__item_2{
     border-radius: 50px;
@@ -369,9 +402,6 @@ a{
     position: relative;
     margin-bottom: 60px;
 }
-.catalog__title{
-    margin-bottom: 25px;
-}
 .catalog__main{
     position: relative;
     width: 100%;
@@ -396,6 +426,9 @@ a{
     justify-content: space-between;
     margin: 0 auto;
 }
+.catalog__items--2{
+    display: none;
+}
 .catalog__item{
     width: 32%;
     height: 480px;
@@ -404,14 +437,14 @@ a{
 }
 
 .catalog__img--1{
-    background: url(../img/catalog1.png);
-    background-position: center;
+    background: url(../img/main_catalog1.jpg);
 }
 .catalog__img--2{
-    background: url(../img/catalog2.png);
+    background: url(../img/main_catalog2.jpg);
+    background-position: center;
 }
 .catalog__img--3{
-    background: url(../img/catalog3.png);
+    background: url(../img/main_catalog3.jpg);
 }
 .catalog__img{
     width: 100%;
@@ -460,9 +493,12 @@ a{
 .catalog__p:hover{
     color: #555555;
 }
+.catalog__p:active{
+    color: #555555;
+}
 .catalog__all{
     position: absolute;
-    width: 129px;
+    width: 130px;
     height: 40px;
     background: #D9E4DB;
     border-radius: 280px;
@@ -478,14 +514,54 @@ a{
     line-height: 40px;
     color: #0D3A2E;
 }
+.catalog__all--contain:hover{
+    color: #24AB70;
+    font-size: 15px;
+}
+@media (max-width:375px){
+    .section__title{
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .catalog__button{
+        display: none;
+    }
+    .catalog__items{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .catalog__items--2{
+        display: none;
+    }
+    .catalog__item{
+        width: 80%;
+        height: 400px;
+        margin: 10px;
+    }
+    .catalog__img{
+        height: 230px;
+    }
+    .catalog__info--item{
+        font-size: 15px;
+    }
+    .catalog__price{
+        font-size: 22px;
+    }
+    
+    .catalog__all{
+        right: calc(50% - 65px);
+    }
+}
 /*-------------------Ксюша--------------------------*/
 /*--------------REVIEWS---------------------------*/
 .reviews__wrapper{
+    padding-top:64px;
+    padding-bottom: 72px;    
+}
+.reviews__cards{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top:64px;
-    padding-bottom: 72px;    
 }
 .reviews__item{
     height: 398px;    
@@ -528,14 +604,37 @@ a{
 .reviews__text__white{
     color: rgb(255, 249, 249);
 }
-/*--------------REALTOR---------------------------*/
-.realtor__one{
-    margin:  0 auto;
+@media (max-width:375px){
+    .reviews__wrapper{
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    .reviews__item{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    .reviews__img{
+        width: 180px;
+        height: 180px;
+        margin-top: -123px;
+        margin-left: 50%;
+    }
 }
-.realtor__one a{
+/*--------------REALTOR---------------------------*/
+.realtors__one{
+    margin:  0 auto;
+    background-color: #E4E8E1;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+}
+.realtors__one a{
     color: #0D3A2E;
 }
-/*--------------REALTOR--------------------------new page-*/
+/*      new page---REALTOR                             */
+/*-------------------Ксюша--------------------------*/
 .realtor__wrapper{
     display: flex;
     justify-content: space-between;
@@ -669,7 +768,7 @@ a{
     background: rgba(150,150,150,.5);
 }
 .realtor__part--two{
-    background: url(../img/realtor__header__fon.png);
+    background: url(../img/realtor__header__fon.jpg);
     background-position: center;
 }
 /*---Айгуль--*/
@@ -738,6 +837,43 @@ a{
 .map__submit:hover{
     background-color: #0D3A2C;
 }
+@media (max-width:375px){
+    
+    .map__bacgr{
+        height: 500px;
+        z-index: 0;
+    }
+    .map__doublegis{
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        z-index: 0;
+    }
+    .map__content{
+        width: 100%;
+        margin-top: -230px;
+    }
+    .map__title{
+        margin: 20px;
+        font-size: 20px;
+    }
+    .map__contact{
+        margin-top: 20px;
+    }
+    .map__form{
+        justify-content: center;
+        margin-right: 0;
+    }
+    .map__email{
+        padding-left: 15px;
+        width: 300px;
+    }
+    .map__submit{
+        width: 110px;
+        margin-left: -110px;
+        font-size: 14px;
+    }
+}
 /*---Виталий--*/
 /*----------------FOOTER----------------------- ----*/
 .footer {
@@ -761,52 +897,134 @@ a{
     clear: both;
 }
 /*-----------new page aparrtttment---------------*/
-.newheader__main{
+.newheader__main, .aheader__main{
     display: flex;
-    height: 210px;
     background: rgba(110, 151, 115, 0.26);
     border-radius: 50px 50px 0 0;
 }
+.newheader__title{
+    font-size: 64px;   
+}
+.newheader__main{
+    height: 210px;
+}
 .newheader__part--one, .newheader__part--two{
     width: 50%;
+    height: 100%;
 }
 .newheader__part--one{
     border-radius: 50px 0 0 0;
 }
 .newheader__part--two{
-    height: 210px;
     border-radius: 0 50px 0 0;
     background-size: cover;
 }
-.apartmen__part--two{
-    background-image: url(../img/apartment__header__fon.png);
-    background-position: center center;
+.apartmen__part--two, .acatalog__part--two{
+    background-image: url(../img/apartment__header__fon1.jpg);
+    background-position: center ;
 }
 .apartmentone__wrapper{
     margin-bottom: 50px;
 }
-.apartmentone__info{
-    width: 70%;
-    padding-left: 60px;
-}
 .newheader__content{
-    padding-top: 40px;
-    padding-left: 30px;
+    padding-top: 30px;
+    padding-left: 40px;
 }
 .apartmentone__content{
     display: flex;
     justify-content: space-between;
+    height: 400px;
+    margin-bottom: 30px;
+    background-color: #E4E8E1;
+    border-radius: 30px;
+}
+.apartmentone__info{
+    width: 50%;
+    padding: 30px;
+    border-radius: 0 30px 30px 0;
 }
 .apartmentone__title{
-    padding-left: 60px;
-    padding-bottom: 25px;
+    margin-top: 45px;
+    padding-bottom: 35px;
+}
+.apartmentone__address{
+    padding-bottom: 20px;
+    color: #0D3A2C;
+}
+.connect__realtor{
+    padding: 5px;
+    margin-left: 70%;
+    color: #14503d;
+}
+.connect__realtor:hover{
+    border-radius: 50px;
+    color: #fff;
+    background-color: #1b664e;
+}
+.apartmentone__info--dop{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 150px;
+}
+.apartmentone__price{
+    padding-right: 15px;
+    font-size: 24px;
+}
+.apartmentone__characteristic{
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: #E4E8E1;
+    border-radius: 30px;
+}
+.characteristic__title{
+    padding-bottom: 20px;
+}
+.apartmentone__description{
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: #E4E8E1;
+    border-radius: 30px;
+}
+.description__title{
+    padding-bottom: 5px;
+}
+.description__change{
+    font-size: 14px;
+    padding-bottom: 20px;
+    color: rgb(100, 100, 100);
+}
+.characteristic__table td{
+    padding-right: 45px;
+}
+
+.apartmentone__title{
+    padding-top: 2px;
 }
 .apartmentone__img--slider{
     display: flex;
     position: relative;
-    width: 30%;
-    height: 280px;
-    margin-right: 25px;
+    width: 50%;
+    height: 100%;
+}
+.apartmentone__map{
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+.a__map{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+.apartmentone__slider{
+    align-self: center;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    background-image: url(../img/apartments__img/a1/1.jpg);
+    background-size: cover;
+    
+    border-radius: 30px 0 0 30px;
 }
 .apartmentone__button{
     position: absolute;
@@ -826,9 +1044,23 @@ a{
 .apartmentone__button--right{
     right: 0;
 }
-.apartmentone__img{
-    align-self: center;
-    width: 320px;
-    height: 280px;
-    margin: 0 auto;
+/* new page - catalog with apartments */
+.aheader__main{
+    height: 330px;
+}
+.aheader__content{
+    padding-top: 50px;
+    padding-left: 40px;
+}
+.aheader__title{
+    font-size: 64px;
+}
+.acatalog__items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.acatalog__elem{
+    margin-bottom: 15px;
 }
