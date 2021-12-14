@@ -17,7 +17,7 @@ main{
     flex-grow: 1;
 }
 .section__wrapper{
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 a{
@@ -122,7 +122,7 @@ a{
     left: 22.17px;
 }
 .video__p{
-    margin-top: 12px;
+    margin-top: 15px;
     margin-left: 16px;
     font-style: normal;
     font-weight: 600;
@@ -224,6 +224,11 @@ a{
     width: 100px;
     border: none;
     color: #0D3A2E;
+    cursor: pointer;
+}
+/*.price__filter::-moz-placeholder, .price__filter::-webkit-input-placeholder, **/
+.price__filter::placeholder{
+    color: #0D3A2C;
 }
 .filter__select{
     background: transparent;
@@ -237,7 +242,7 @@ a{
     .section__wrapper{
         width: 100%;
     }
-    .news__wrapper, .news, .realtor__wrapper, .realtor, .footer{
+    .news__wrapper, .news, .realtors__wrapper, .realtor, .footer{
         display: none;
     }
 
@@ -310,6 +315,7 @@ a{
         height: 44px;
         margin-top: 15px;
         margin-right: 0;
+        border-right: none;
     }
     .filter__1{
         margin-left: 0;
@@ -359,7 +365,6 @@ a{
     height: 520px;    
     background-color:#F4FBF8;
     display: flex;
-    
 }
 .news__item_2{
     align-content: space-between;
@@ -392,8 +397,7 @@ a{
 .news__part-two{
     width: 300px;
     border-radius: 0 50px 0 0;
-    padding-left: 25px;
-    padding-top: 30px;
+    padding: 30px;
 }
 /*---Айгуль--*/
 /*--------------CATALOG---------------------------*/
@@ -420,20 +424,27 @@ a{
 .catalog__button--right{
     right: -2.3%;
 }
+.catalog__slider{
+    width: 100%;
+    overflow: hidden;
+}
 .catalog__items{
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-}
-.catalog__items--2{
-    display: none;
+    left: 0;
+    transition: all 3s;
 }
 .catalog__item{
     width: 32%;
     height: 480px;
     background: #FAFAFA;
     border-radius: 16px;
+    flex-shrink: 0;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .catalog__img--1{
@@ -453,11 +464,10 @@ a{
     border-radius: 16px 16px 0px 0px;
 }
 .catalog__content{
-    padding-left: 16px;
+    padding: 16px;
 }
 .catlog__address{
     color: #24AB70;
-    margin-top: 25px;
 }
 .catalog__p{
     padding-top: 20px;
@@ -530,9 +540,6 @@ a{
         justify-content: center;
         flex-wrap: wrap;
     }
-    .catalog__items--2{
-        display: none;
-    }
     .catalog__item{
         width: 80%;
         height: 400px;
@@ -569,9 +576,8 @@ a{
     background-color:#24AB70;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 20px;
     border-radius: 16px;
+    padding: 25px;
 }
 .reviews__whiteBack{
     background-color: #F8F8F8;
@@ -590,16 +596,13 @@ a{
     margin-left: 150px;
 }
 .reviews__text--name{
+    padding-bottom: 20px;
     font-size: larger;
     color: aliceblue;
-    margin: 20px;    
     text-align: right;
 }
 .reviews__blackText{
     color: black;
-}
-.reviews__text{
-    margin: 15px;
 }
 .reviews__text__white{
     color: rgb(255, 249, 249);
@@ -637,30 +640,32 @@ a{
 /*-------------------Ксюша--------------------------*/
 .realtor__wrapper{
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    padding-top:20px;
-    padding-bottom: 20px;   
     background-color: #E4E8E1;
     position: relative;
-    margin: 0 auto;
-    margin-top: 25px;
-    margin-bottom: 35px;
     border-radius: 20px;
+    margin-bottom: 45px;
+}
+.realtor__main{
+    padding: 30px;
 }
 .realtor__about{
     display: flex;
-    flex-direction: row;
-    margin: 10px;   
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 25px;
+}
+.realtor__info{
+    display: flex;
+    flex-wrap: nowrap;
 }
 .realtor__img{
-    margin: 10px;
-    padding: 10px;
+    width: 250px;
+    height: 250px;
     position: relative;
 }
 .realtor__exp{
-    margin: 0 auto;
-    margin-top: 20px;
+    margin-bottom: 15px;
     font-weight: bold;
     font-size: 30px;
     color: #1D271E;
@@ -668,8 +673,8 @@ a{
 .realtor__about--middle{
     display: flex;
     flex-direction: column;
+    margin-left: 25px;
     position: relative;
-    margin-left: 70px;
 }
 .realtor__name{
     margin-top: 20px;
@@ -682,105 +687,100 @@ a{
     font-size: 20px;
     color: #ffffff;
 }
-.realtor__star{
+.realtor__stars{
     margin-top: 60px;       
+}
+.realtor__star{
+    width: 45px;
+    height: 45px;
 }
 .realtor__about--last{
     display: flex;
     flex-direction: column;
-    margin-left: 250px;  
-    margin-top: 20px;
+    margin-right: 25px;
 }
 .realtor__number{    
     font-size: 20px;
-    padding-top: 20px;
-    padding-left: 50px;
-    padding-bottom: 20px;
-    padding-right: 20px;
+    padding: 23px;
     font-size: 30px;
     font-weight: bold;
     background-color: #6E9773;
     color: #E8E8E8;
     border-radius: 20px;
 }
-.realtor__number a{
-    text-decoration: none;
-    color: #E8E8E8;
-}
-.realtor__number a:hover{
+.realtor__number:hover{
     color: #0D3A2E;
-    text-decoration:underline ;
+    text-decoration: underline ;
 }
-
-.realtor__number a:focus{
+.realtor__number:focus{
     outline: #E8E8E8 solid 1px;
 }
-
-.realtor__number a:active{
+.realtor__number:active{
     color: #E8E8E8;
     background: rgba(150,150,150,.5);
 }
-
 .realtor__communication{
-    margin-top: 20px;    
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
-.realtor__communication img{
-    padding: 5px;
+.realtor__icon {
+    width: 48px;
+    height: 48px;
+    margin: 5px;
 }
-
+.realtor__icon , .realtor__icon  path{
+    fill: #1b664e;
+}
+.realtor__vk{
+    width: 50px;
+    height: 50px;
+}
 .realtor__description{
-    padding-left: 30px;
+    width: 90%;
     font-size: 20px;
     color: #1D271E;
+    margin-bottom: 35px;
 }
 .realtor__underline{
     font-weight: bold;
     text-decoration: black ;
 }
-.realtor__footer{
-    width: auto;
-    height: auto;
+.realtor__return{
     font-size: 20px;
     border-radius: 20px;
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    margin-left: 20px;
-    margin-top: 30px;
+    padding: 10px 20px 10px 20px;
     background-color: #6E9773;
-}
-.realtor__footer a{
-    text-decoration: none;
     color: #E8E8E8;
 }
-.realtor__footer a:hover{
+.realtor__return:hover{
     color: #0D3A2E;
-    text-decoration:underline ;
+    text-decoration: underline ;
 }
-
-.realtor__footer a:focus{
+.realtor__return:focus{
     outline: #E8E8E8 solid 1px;
 }
 
-.realtor__footer a:active{
+.realtor__return:active{
     color: #E8E8E8;
     background: rgba(150,150,150,.5);
 }
+
 .realtor__part--two{
     background: url(../img/realtor__header__fon.jpg);
     background-position: center;
 }
+
 /*---Айгуль--*/
 /*----------------MAP----------------------- ----*/
 
 .map__wrapper{
     position: relative;
 }
-
 .map__bacgr{
     height: 677px;
     z-index: 0;
+    margin: 20px;
 }
 .map__doublegis{
     width: 100%;
@@ -791,29 +791,27 @@ a{
 .map__content{
     position: relative;
     width: 80%;
-    height: 200px;
+    height: 150px;
     margin: 0 auto;
     background-color: #ffffff;
     border: transparent solid;
     z-index: 10;
     border-radius: 30px;
+    padding: 40px 10px 10px 40px;
     margin-top: -250px;
     margin-bottom: 100px;
 }
 .map__title{
-    margin-left: 66px;
-    margin-top: 40px;
     font-weight: 600;
     font-size: 36px;
     line-height: 40px;
 }
 .map__contact{
-    margin-top: 30px;
+    margin-top: 25px;
 }
-.map__form{
-    display: flex;
-    justify-content: right;
-    margin-right: 66px;
+.map__contact--text{
+    padding-top: 15px;
+    color: #555555;
 }
 .map__email, .map__submit{
     border: none;
@@ -838,35 +836,33 @@ a{
     background-color: #0D3A2C;
 }
 @media (max-width:375px){
-    
     .map__bacgr{
         height: 500px;
         z-index: 0;
+        margin: 20px auto;
     }
     .map__doublegis{
-        width: 100%;
+        width: 90%;
         height: 100%;
         border-radius: 30px;
         z-index: 0;
+        margin: 0 auto;
     }
     .map__content{
-        width: 100%;
+        width: 87%;
         margin-top: -230px;
+        padding: 20px 0 0 20px;
     }
     .map__title{
-        margin: 20px;
         font-size: 20px;
     }
     .map__contact{
         margin-top: 20px;
     }
-    .map__form{
-        justify-content: center;
-        margin-right: 0;
-    }
     .map__email{
         padding-left: 15px;
-        width: 300px;
+        padding-left: 0;
+        width: 270px;
     }
     .map__submit{
         width: 110px;
@@ -906,6 +902,7 @@ a{
     font-size: 64px;   
 }
 .newheader__main{
+    width: 100%;
     height: 210px;
 }
 .newheader__part--one, .newheader__part--two{
@@ -954,12 +951,13 @@ a{
 .connect__realtor{
     padding: 5px;
     margin-left: 70%;
-    color: #14503d;
-}
-.connect__realtor:hover{
     border-radius: 50px;
     color: #fff;
     background-color: #1b664e;
+}
+.connect__realtor:hover{
+    color: #6E9773;
+    background-color: #1D271E;
 }
 .apartmentone__info--dop{
     display: flex;
@@ -1061,6 +1059,10 @@ a{
     justify-content: space-between;
     align-content: space-between;
 }
-.acatalog__elem{
-    margin-bottom: 15px;
+.acatalog__item{
+    width: 30%;
+    height: 480px;
+    background: #FAFAFA;
+    border-radius: 16px;
+    margin: 12px;
 }
