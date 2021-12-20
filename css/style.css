@@ -29,10 +29,40 @@ a{
     position: relative;
     margin-bottom: 125px;
 }
+.menu__mobil, .menu__humburger{
+    display: none;
+}
+.header__navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.header__mini{
+    display: none;
+}
+.header__nav ul{
+    list-style-type: none;
+}
+.header__nav li{
+    display: inline;
+    margin: 25px;
+}
+.header__nav a, .header__mini a{
+    color: #0D3A2E;
+}
+.btn__entrance{
+    border: none;
+    background: #6E9773;
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+}
 .header__logo{
     position: relative;
     width: 70px;
-    margin: 0 auto;
     margin-top: 25px;
     margin-bottom: 35px;
 }
@@ -96,7 +126,7 @@ a{
 .header__part--two{
     width: 640px;
     height: 656px;
-    background: url(../img/header.png);
+    background-image: url(../img/header.png);
     background-size: cover;
     border-radius: 0 50px 0 0;
 }
@@ -242,16 +272,80 @@ a{
     .section__wrapper{
         width: 100%;
     }
-    .news__wrapper, .news, .realtors__wrapper, .footer{
+    .news__wrapper, .news, .footer{
         display: none;
     }
 
     .header {
         margin-bottom: 30px;
     }
-    .header__logo{
+    .header__navbar{
         margin-top: 15px;
         margin-bottom: -85px;
+    }
+    .header__nav{
+        display: none;
+    }
+    .header__entrance{
+        display: none;
+    }
+    .menu__humburger{
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        z-index: 999;
+    }
+    .bar{
+        width: 35px;
+        height: 3px;
+        background-color: #0D3A2E;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    /*open ham*/
+    .change .bar1{
+        -webkit-transform: rotate(-45deg) translate(-7px, 6px);
+        transform: rotate(-45deg) translate(-7px, 6px); 
+    }
+    .change .bar2{
+        opacity: 0;
+    }
+    .change .bar3{
+        -webkit-transform: rotate(45deg) translate(-6px, -6px);
+        transform: rotate(45deg) translate(-6px, -6px); 
+    }
+    /*mob menu*/
+    .menu__mobil{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 35px;
+        transform: translateX(0);
+        transition: transform 0.5s;
+        background-color: #6E9773;
+        z-index: 998;
+    }
+    .menu__mobil .active{
+        transform: translateX(0);
+    }
+    .menu__mobil li{
+        list-style-type: none;
+        font-size: 24px;
+        margin: 15px;
+    }
+    .menu__mobil a, .btn__ul{
+        color: #F3FBEF;
+    }
+    .btn__ul{
+        border: none;
+        background: none;
+    }
+    .header__logo{
+        margin: 0 auto;
+        margin-top: -13px;
+        margin-bottom: 0;
     }
     .header__main{
         display: flex;
@@ -277,6 +371,7 @@ a{
         margin-bottom: -50px;
         border-radius: 0 0 0 0;
         order: 0;
+        background-image: linear-gradient( 0deg, rgba(110, 110, 110, 0.2), rgba(110, 110, 110, 0.2)), url(../img/header.png);
     }
     .header__content{
         padding-left: 0;
@@ -433,6 +528,9 @@ a{
 .catalog__button--right{
     right: -2.3%;
 }
+.cbtn__prev, .cbtn__next{
+    fill: #6E9773;
+}
 .catalog__slider{
     width: 100%;
     overflow: hidden;
@@ -551,7 +649,7 @@ a{
     }
     .catalog__item{
         width: 80%;
-        height: 410px;
+        max-height: 440px;
         margin: 10px;
     }
     .catalog__img{
@@ -633,16 +731,108 @@ a{
         margin-top: -123px;
     }
 }
-/*--------------REALTOR---------------------------*/
-.realtors__one{
-    margin:  0 auto;
-    background-color: #E4E8E1;
-    padding: 15px;
-    border-radius: 20px;
-    text-align: center;
+@media (max-width:320px){
+    .reviews__img{
+        margin-left: 120px;
+    }
 }
-.realtors__one a{
+
+/*--------------REALTOR---------------------------*/
+.realtors__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.realtors__title{
+    width: 100%;
+}
+.realtors__items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.realtors__item{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 45%;
+    height: 100%;
+    border-radius: 30px;
+    padding: 15px;
+    margin-bottom: 35px;
+    background: #6E9773;
+}
+.realtors__item--2{
+    background: #E5E5E5;
+}
+.realtors__img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-image: url(../img/realtor.png);
+    background-size: cover;
+    margin-right: 25px;
+}
+.realtors__info{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.realtors__info a{
+    color: #000000;
+    font-weight: bold;
+}
+.realtors__info a:hover{
+    color: #555555;
+}
+.grade{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.realtors__stars svg{
+    width: 23px;
+    height: 21px;
+}
+.realtors__all{
+    width: 130px;
+    padding: 10px 15px;
+    background: #D9E4DB;
+    border-radius: 280px;
+    text-align: center;
     color: #0D3A2E;
+}
+.realtors__all:hover{
+    color: #24AB70;
+}
+@media(max-width:375px){
+    .realtors__items{
+        margin-top: 30px;
+        justify-content: center;
+    }
+    .realtors__item{
+        flex-wrap: wrap;
+        width: 80%;
+        margin-bottom: 25px;
+    }
+    .realtors__img{
+        width: 90px;
+        height: 90px;
+        margin-right: 0;
+    }
+    .realtors__stars svg{
+        width: 15px;
+        height: 13px;
+    }
+}
+@media(max-width:280px){
+    .realtors__item{
+        justify-content: center;
+    }
+    .realtors__info{
+        text-align: center;
+    }
 }
 /*      new page---REALTOR                             */
 /*-------------------Ксюша--------------------------*/
@@ -779,6 +969,9 @@ a{
 }
 
 @media (max-width:375px){
+    .realtor__part--two{
+        background: linear-gradient( 0deg, rgba(110, 110, 110, 0.2), rgba(110, 110, 110, 0.2)), url(../img/realtor__header__fon.jpg);
+    }
     .realtor__about{
         justify-content: center;
         flex-wrap: wrap;
@@ -892,7 +1085,7 @@ a{
         z-index: 0;
     }
     .map__doublegis{
-        width: 90%;
+        width: 87%;
         height: 100%;
         border-radius: 30px;
         z-index: 0;
@@ -916,6 +1109,15 @@ a{
         width: 110px;
         margin-left: -110px;
         font-size: 14px;
+    }
+}
+@media (max-width:320px){
+    .map__email{
+        width: 240px;
+    }
+    .map__submit{
+        width: 90px;
+        margin-left: -90px;
     }
 }
 /*---Виталий--*/
@@ -1081,13 +1283,13 @@ a{
 }
 .button__apartment{
     text-align: center;
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
     border-radius: 50px;
     border: none;
     color: #B5B8B1;
-    background-color: linear-gradient( rgba(169, 240, 214, 0.87));/*?????*/
-    font-size: 28px;
+    background-color: rgba(138, 173, 160, 0.5);/*?????*/
+    font-size: 20px;
 }
 .apartmentone__button--left{
     left: 3px;
@@ -1182,10 +1384,10 @@ a{
 }
 @media (max-width:375px){
     .apartmen__filters{
-        margin-top: -90px;
+        margin-top: -50px;
     }
     .acatalog__part--two{
-    height: 330px;
+        height: 380px;
     }
     .acatalog__items{
         justify-content: center;
@@ -1193,5 +1395,46 @@ a{
     .acatalog__item{
         width: 80%;
         height: 410px;
+    }
+    .apartmen__part--two, .acatalog__part--two{
+        background-image: linear-gradient( 0deg, rgba(110, 110, 110, 0.35), rgba(110, 110, 110, 0.35)), url(../img/apartment__header__fon1.jpg);
+    }
+}
+/*ERROR PAGE*/
+.error__body{
+    background: #f7f8f9;
+}
+.error__wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: -140px;
+}
+.error__title{
+    font-size: 64px;
+    display: none;
+}
+.error__img{
+    width: 700px;
+    margin-bottom: 20px;
+}
+.error__p{
+    margin-bottom: 25px;
+    color: #0D3A2C;
+}
+.error__return{
+    padding: 10px 25px;
+    background: #6E9773;
+    border-radius: 50px;
+    color: #F8F8F8;
+}
+@media(max-width:375px){
+    .error__wrapper{
+        margin-top: 65px;
+    }
+    .error__img{
+        width: 100%;
     }
 }

@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <script src="js/slider1.js" defer></script>
+    <script src="js/menu.js" de></script>
     <!---font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,24 +31,53 @@
     <header class="header">
         <!---Айгуль-->
         <div class="header__wrapper section__wrapper">
-            <div class="header__logo logo">
-                <a href="index.html">
-                    <div class="logo__parts">
-                        <svg class="logo__part logo__part--one" width="11" height="36" viewBox="0 0 11 36" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0L11 6.96774V36H0V0Z" fill="#0D3A2E" />
-                        </svg>
-                        <svg class="logo__part logo__part--two" width="10" height="40" viewBox="0 0 10 40" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0L10 6V40H0V0Z" fill="#7DB383" />
-                        </svg>
-                        <svg class="logo__part logo__part--three" width="11" height="24" viewBox="0 0 11 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0L11 5.76V24H0V0Z" fill="#FFB903" />
-                        </svg>
-                    </div>
-                    <div class="logo__title">ChelRent</div>
-                </a>
+            <div class="header__navbar">
+                <div class="header__logo logo">
+                    <a href="index.html">
+                        <div class="logo__parts">
+                            <svg class="logo__part logo__part--one" width="11" height="36" viewBox="0 0 11 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0L11 6.96774V36H0V0Z" fill="#0D3A2E" />
+                            </svg>
+                            <svg class="logo__part logo__part--two" width="10" height="40" viewBox="0 0 10 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0L10 6V40H0V0Z" fill="#7DB383" />
+                            </svg>
+                            <svg class="logo__part logo__part--three" width="11" height="24" viewBox="0 0 11 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0L11 5.76V24H0V0Z" fill="#FFB903" />
+                            </svg>
+                        </div>
+                        <div class="logo__title">ChelRent</div>
+                    </a>
+                </div>
+                <div class="menu__humburger" onclick="humClick(this)">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                </div>
+                <div class="menu__mobil">
+                    <nav class="">
+                        <li><a href="index.html">Главное</a></li>
+                        <li><a href="apartments__catalog.html">Квартиры</a></li>
+                        <li><a href="error.html">Риелторы</a></li>
+                        <li><a href="error.html">Новости</a></li>
+                        <li><a href="error.html">О нас</a></li>
+                        <li><button class="btn__ul">Вход</button></li>
+                    </nav>
+                </div>
+                <div class="header__nav">
+                    <ul class="header__ul" id="navLinks">
+                        <li><a href="index.html">Главное</a></li>
+                        <li><a href="apartments__catalog.html">Квартиры</a></li>
+                        <li><a href="error.html">Риелторы</a></li>
+                        <li><a href="error.html">Новости</a></li>
+                        <li><a href="error.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="header__entrance">
+                    <button class="btn__entrance">Вход</button>
+                </div>
             </div>
             <div class="header__main">
                 <div class="header__part--one">
@@ -183,24 +213,22 @@
                 <h2 class="section__title catalog__title">Квартиры</h2>
                 <div class="catalog__main">
                     <div class="catalog__button catalog__button--left">
-                        <button class="button__catalog" id="PrevBtn" type="button">
+                        <button class="button__catalog cbtn__prev" id="PrevBtn" type="button">
                             <svg class="c__buton" width="35" height="52" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" style="enable-background:new 0 0 512 512;"
                                 version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-                                <polygon
-                                    points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 "
-                                    fill="#6E9773" />
+                                <polygon class="btn-fill-prev"
+                                    points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 " />
                             </svg>
                         </button>
                     </div>
                     <div class="catalog__button catalog__button--right">
-                        <button class="button__catalog" id="NextBtn" type="button">
+                        <button class="button__catalog cbtn__next" id="NextBtn" type="button">
                             <svg class="c__buton" width="35" height="52" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" style="enable-background:new 0 0 512 512;"
                                 version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-                                <polygon
-                                    points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "
-                                    fill="#6E9773" />
+                                <polygon class="btn-fill-next"
+                                    points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 " />
                             </svg>
                         </button>
                     </div>
@@ -364,7 +392,135 @@
             <div class="section__wrapper realtors__wrapper">
                 <!---Вениамин-->
                 <h2 class="section__title realtors__title">Риелтор</h2>
-                <div class="realtors__one"><a href="realtor.html">Риелтор 1</a></div>
+                <div class="realtors__items">
+                    <div class="realtors__item">
+                        <div class="realtors__img realtors__img--1"></div>
+                        <div class="realtors__info">
+                            <a href="realtor.html">fio</a>
+                            <div class="grade">
+                                <div class="realtors__stars">
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>  
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>       
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>       
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>       
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>                                             
+                                </div>
+                                <div class="stars__points">5.0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="realtors__item realtors__item--2">
+                        <div class="realtors__img realtors__img--2"></div>
+                        <div class="realtors__info">
+                            <a href="realtor.html">fio</a>
+                            <div class="grade">
+                                <div class="realtors__stars">
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>  
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>       
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>       
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>       
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>                                             
+                                </div>
+                                <div class="stars__points">5.0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="realtors__item realtors__item--2">
+                        <div class="realtors__img realtors__img--3"></div>
+                        <div class="realtors__info">
+                            <a href="realtor.html">fio</a>
+                            <div class="grade">
+                                <div class="realtors__stars">
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>  
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>       
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>       
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>       
+                                    <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2658L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18322 27.1353L9.55093 16.7705L0.734152 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2658L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18322 27.1353L9.55093 16.7705L0.734152 10.3647H11.6323L15 0Z" fill="#E5E5E5"/>
+                                    </svg>                                           
+                                </div>
+                                <div class="stars__points">4.0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="realtors__item">
+                        <div class="realtors__img realtors__img--4"></div>
+                        <div class="realtors__info">
+                            <a href="realtor.html">fio</a>
+                            <div class="grade">
+                                <div class="realtors__stars">
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>  
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>       
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>       
+                                    <svg viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2659L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18323 27.1353L9.55094 16.7705L0.734161 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                    </svg>       
+                                    <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 0L18.3677 10.3647H29.2658L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18322 27.1353L9.55093 16.7705L0.734152 10.3647H11.6323L15 0Z" fill="#FFB903"/>
+                                        <path d="M15 0L18.3677 10.3647H29.2658L20.4491 16.7705L23.8168 27.1353L15 20.7295L6.18322 27.1353L9.55093 16.7705L0.734152 10.3647H11.6323L15 0Z" fill="#E5E5E5"/>
+                                    </svg>                                           
+                                </div>
+                                <div class="stars__points">4.0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="realtors__all" href="error.html">
+                    Посмотреть всё
+                </a>
             </div>
         </section>
         <section class="section reviews">

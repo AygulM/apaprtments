@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <script defer type="text/javascript" src="js/script.js"></script><!---defer – отложенная загрузка-->
+    <script src="js/menu.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&family=Vollkorn&display=swap" rel="stylesheet">
@@ -25,21 +26,53 @@
 <body>
     <header class="header">
         <div class="header__wrapper section__wrapper">
-            <div class="header__logo">
-                <a href="index.html">
-                    <div class="logo__parts">
-                        <svg class="logo__part logo__part--one" width="11" height="36" viewBox="0 0 11 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0L11 6.96774V36H0V0Z" fill="#0D3A2E"/>
-                        </svg>   
-                        <svg class="logo__part logo__part--two" width="10" height="40" viewBox="0 0 10 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0L10 6V40H0V0Z" fill="#7DB383"/>
-                        </svg>    
-                        <svg class="logo__part logo__part--three" width="11" height="24" viewBox="0 0 11 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0L11 5.76V24H0V0Z" fill="#FFB903"/>
-                        </svg>                    
-                    </div>
-                    <div class="logo__title">ChelRent</div>
-                </a>
+            <div class="header__navbar">
+                <div class="header__logo logo">
+                    <a href="index.html">
+                        <div class="logo__parts">
+                            <svg class="logo__part logo__part--one" width="11" height="36" viewBox="0 0 11 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0L11 6.96774V36H0V0Z" fill="#0D3A2E" />
+                            </svg>
+                            <svg class="logo__part logo__part--two" width="10" height="40" viewBox="0 0 10 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0L10 6V40H0V0Z" fill="#7DB383" />
+                            </svg>
+                            <svg class="logo__part logo__part--three" width="11" height="24" viewBox="0 0 11 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0L11 5.76V24H0V0Z" fill="#FFB903" />
+                            </svg>
+                        </div>
+                        <div class="logo__title">ChelRent</div>
+                    </a>
+                </div>
+                <div class="menu__humburger" onclick="humClick(this)">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                </div>
+                <div class="menu__mobil">
+                    <nav class="">
+                        <li><a href="index.html">Главное</a></li>
+                        <li><a href="apartments__catalog.html">Квартиры</a></li>
+                        <li><a href="error.html">Риелторы</a></li>
+                        <li><a href="error.html">Новости</a></li>
+                        <li><a href="error.html">О нас</a></li>
+                        <li><button class="btn__ul">Вход</button></li>
+                    </nav>
+                </div>
+                <div class="header__nav">
+                    <ul class="header__ul" id="navLinks">
+                        <li><a href="index.html">Главное</a></li>
+                        <li><a href="apartments__catalog.html">Квартиры</a></li>
+                        <li><a href="error.html">Риелторы</a></li>
+                        <li><a href="error.html">Новости</a></li>
+                        <li><a href="error.html">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="header__entrance">
+                    <button class="btn__entrance">Вход</button>
+                </div>
             </div>
             <div class="newheader__main">
                 <div class="newheader__part--one">
@@ -56,7 +89,8 @@
                     <div class="apartmentone__img--slider">
                         <div class="apartmentone__button apartmentone__button--left">
                             <button class="button__apartment" id="apartmentOneLeft" type="button">
-                                &#8249
+                                
+                                <span>&#8249</span>
                             </button>             
                         </div>
                         <div class="apartmentone__button apartmentone__button--right">
@@ -73,7 +107,7 @@
                             <p class="apartmentone__sqm">36,5 кв.м</p>
                             <div class="apartmentone__price">22 500 ₽</div>
                         </div>
-                        <a class="connect__realtor" href="#">Связаться с риелтором</a>
+                        <a class="connect__realtor" href="tel:+79227307947">Связаться с риелтором</a>
                     </div>
                 </div>
                 <div class="apartmentone__description">
