@@ -11,7 +11,8 @@ body{
     display: flex;
     flex-direction: column;
     height: 100%;
-    font-family: 'Vollkorn',  Georgia, 'Times New Roman', Times, serif;
+    
+    font-family: 'PT Serif', serif;
 }
 main{
     flex-grow: 1;
@@ -272,10 +273,6 @@ a{
     .section__wrapper{
         width: 100%;
     }
-    .news__wrapper, .news, .footer{
-        display: none;
-    }
-
     .header {
         margin-bottom: 30px;
     }
@@ -294,6 +291,11 @@ a{
         cursor: pointer;
         position: relative;
         z-index: 999;
+    }
+    .m_hum{
+        position: absolute;
+        right: 0;
+        top: 30px;
     }
     .bar{
         width: 35px;
@@ -442,6 +444,21 @@ a{
         width: 190px;
     }
 }
+@media(max-width:280px){
+    .header__title{
+        font-size: 30px;
+    }
+    .search__button{
+        font-size: 16px;
+    }
+    .icon__magnifier, .search__icon{
+        width: 15px;
+        height: 15px;
+    }
+    .search__icon{
+        left: 55px;
+    }
+}
 /**/
 .section__title{
     margin-bottom: 25px;
@@ -459,16 +476,15 @@ a{
 }
 .news__item, .news__item_2{
     border-radius: 50px;
+    width: 600px;
 }
 .news__item{
-    width: 600px;
     height: 520px;    
     background-color:#F4FBF8;
     display: flex;
 }
 .news__item_2{
     align-content: space-between;
-    width: 600px;
     height: 520px; 
     display: flex;
     flex-wrap: wrap;
@@ -476,15 +492,14 @@ a{
 .news__content--one, .news__content--two{
     display: flex;   
     border-radius: 50px;
+    width: 600px;
 }
 .news__content--two{
-    width: 600px;
     height: 48%;
     background-color:#F4FBF8;
 }
 .news__part-one, .news__part-one-2{
-    width: 300px;
-    background: url(../img/news_img.jpg);
+    width: 50%;
     background-size: cover;
     border-radius: 50px 0 0 50px;
 }
@@ -495,9 +510,62 @@ a{
     height: 100%;
 }
 .news__part-two{
-    width: 300px;
+    width: 50%;
     border-radius: 0 50px 0 0;
     padding: 30px;
+}
+.news__fon--1{
+    background-image: url(../img/news/news3.jpg);
+    background-position: center;
+}
+.news__fon--2{
+    background-image: url(../img/news/news2.jpg);
+    background-position: left;
+}
+.news__fon--3{
+    background-image: url(../img/news/news1.jpg);
+}
+@media(max-width:375px){
+    .news__items{
+        margin-top: 25px;
+        flex-wrap: wrap;
+    }
+    .news__item, .news__item_2{
+        width: 100%;
+        border-radius: 30px;
+    }
+    .news__item{
+        height: 200px;    
+        margin-bottom: 20px;
+    }
+    .news__item_2{
+        height: 420px; 
+    }
+    .news__content--one, .news__content--two{
+        border-radius: 30px;
+    }
+    .news__part-one, .news__part-one-2{
+        width: 65%;
+        border-radius: 30px 0 0 30px;
+    }
+    .news__part-one{
+        height: 100%;
+    }
+    .news__part-two{
+        width: 35%;
+        padding: 15px;
+    }
+    .news__part-two h3{
+        font-size: 18px;
+    }
+    .news__part-two p, .news__part-two a{
+        display: none;
+    }
+}
+@media(max-width:375px){
+    .news__part-two h3{
+        font-size: 14px;
+    }
 }
 /*---Айгуль--*/
 /*--------------CATALOG---------------------------*/
@@ -555,14 +623,23 @@ a{
 }
 
 .catalog__img--1{
-    background: url(../img/main_catalog1.jpg);
+    background: url(../img/main_catalog3.jpg);
 }
 .catalog__img--2{
     background: url(../img/main_catalog2.jpg);
     background-position: center;
 }
 .catalog__img--3{
-    background: url(../img/main_catalog3.jpg);
+    background: url(../img/main_catalog1.jpg);
+}
+.catalog__img--4{
+    background: url(../img/apartments__img/a3/1.jpg);
+}
+.catalog__img--5{
+    background: url(../img/apartments__img/a2/1.jpg);
+}
+.catalog__img--6{
+    background: url(../img/apartments__img/a4/1.jpg);
 }
 .catalog__img{
     width: 100%;
@@ -636,6 +713,9 @@ a{
     font-size: 15px;
 }
 @media (max-width:375px){
+    .c__item--1, .c__item--2, .c__item--3{
+        display: none;
+    }
     .section__title{
         text-align: center;
         margin-bottom: 5px;
@@ -659,11 +739,25 @@ a{
         font-size: 15px;
     }
     .catalog__price{
-        font-size: 22px;
+        font-size: 20px;
     }
-    
     .catalog__all{
         right: calc(50% - 65px);
+    }
+}
+@media(max-width:360px){
+    .catalog__price{
+        font-size: 16px;
+    }
+}
+@media(max-width:360px){
+    .catalog__info--item, .catalog__price{
+        font-size: 14px;
+    }
+}
+@media(max-width:280px){
+    .catalog__info--item, .catalog__price{
+        font-size: 12px;
     }
 }
 /*-------------------Ксюша--------------------------*/
@@ -671,6 +765,7 @@ a{
 .reviews__wrapper{
     padding-top:64px;
     padding-bottom: 72px;    
+    box-sizing: border-box;
 }
 .reviews__cards{
     display: flex;
@@ -692,12 +787,21 @@ a{
 .reviews__greenback{
     background-color: #6E9773;
 }
+.reviews__img--one{
+    background: url(../img/revies__av3.jpg);
+}
+.reviews__img--two{
+    background: url(../img/realtor_vk5.png);
+}
+.reviews__img--three{
+    background: url(../img/revies__av4.png);
+}
 .reviews__img{
     width: 180px;
     height: 180px;
     background-color: #F3FBEF;
-    background-image: url(../img/revies__cat.gif);
     background-size: cover;
+    background-position: center center;
     border-radius: 50%;
     margin-top: -123px;
     margin-left: 150px;
@@ -736,7 +840,11 @@ a{
         margin-left: 120px;
     }
 }
-
+@media (max-width:280px){
+    .reviews__img{
+        margin-left: 70px;
+    }
+}
 /*--------------REALTOR---------------------------*/
 .realtors__wrapper{
     display: flex;
@@ -765,11 +873,22 @@ a{
 .realtors__item--2{
     background: #E5E5E5;
 }
+.realtors__img--1{
+    background: url(../img/realtor4.png);
+}
+.realtors__img--2{
+    background: url(../img/realtor1.jpg);
+}
+.realtors__img--3{
+    background: url(../img/realtor2.jpg);
+}
+.realtors__img--4{
+    background: url(../img/realtor3.png);
+}
 .realtors__img{
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background-image: url(../img/realtor.png);
     background-size: cover;
     margin-right: 25px;
 }
@@ -790,6 +909,9 @@ a{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+}
+.stars__points{
+    margin-left: 10px;
 }
 .realtors__stars svg{
     width: 23px;
@@ -865,7 +987,6 @@ a{
 .realtor__exp{
     margin-bottom: 15px;
     font-weight: bold;
-    font-size: 22px;
     color: #1D271E;
 }
 .realtor__about--middle{
@@ -1014,6 +1135,11 @@ a{
         display: none;
     }
 }
+@media(max-width:280px){
+    .realtor__description{
+        font-size: 16px;
+    }
+}
 /*---Айгуль--*/
 /*----------------MAP----------------------- ----*/
 
@@ -1030,15 +1156,18 @@ a{
     height: 100%;
     border-radius: 30px;
     z-index: 0;
-    margin: 20px;
+    margin: 20px auto;
 }
 .map__content{
     position: relative;
     width: 80%;
     height: 150px;
+    display: flex;
+    justify-content: left;
+    flex-wrap: nowrap;
     margin: 0 auto;
     background-color: #ffffff;
-    border: transparent solid;
+    border: transparent solid 1px;
     z-index: 10;
     border-radius: 30px;
     padding: 40px 10px 10px 40px;
@@ -1051,10 +1180,10 @@ a{
     line-height: 40px;
 }
 .map__contact{
-    margin-top: 25px;
+    margin-top: 55px;
 }
 .map__contact--text{
-    padding-top: 15px;
+    padding-bottom: 15px;
     color: #555555;
 }
 .map__email, .map__submit{
@@ -1089,9 +1218,13 @@ a{
         height: 100%;
         border-radius: 30px;
         z-index: 0;
+        margin: 20px;
     }
     .map__content{
         width: 87%;
+        height: 170px;
+        justify-content: center;
+        flex-direction: column;
         margin-top: -230px;
         padding: 20px 0 0 20px;
     }
@@ -1120,27 +1253,62 @@ a{
         margin-left: -90px;
     }
 }
+@media (max-width:280px){
+    .map__doublegis{
+        margin: 15px;
+    }
+    .map__title{
+        font-size: 16px;
+    }
+    .map__contact--text{
+        font-size: 14px;
+    }
+    .map__email{
+        width: 200px;
+    }
+    .map__email{
+        font-size: 12px;
+    }
+    .map__submit{
+        font-size: 12px;
+    }
+}
 /*---Виталий--*/
 /*----------------FOOTER----------------------- ----*/
-.footer {
-    background:  #6E9773;
-    color: #fff;
-    font-size: 100%;
-    padding: 5px;
-    clear : both;
+.footer{
+    background: #555c5a;
+    width: 100%;
+    margin-top: 55px;
 }
-.footer a {
-    color: #000000;
+.footer__navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
 }
-.footer a:hover {
-    color: white;
+.footer__ul li{
+    display: inline;
+    list-style-type: none;
+    padding-left: 30px;
 }
-.footer p {
-    padding: 2px;
-    text-align: center;
+.footer__elem, .footer__c{
+    color: #F8F8F8;
+    transition: 0.3s;
 }
-.clearfloat {
-    clear: both;
+.footer__elem:hover{
+    color: #8a8a8a;
+}
+.active--f{
+    color: #8a8a8a;
+}
+@media(max-width:375px){
+    .footer__navbar{
+        height: 50px;
+        width: 100%;
+    }
+    .footer__ul{
+        display: none;
+    }
 }
 /*-----------new page aparrtttment---------------*/
 .newheader__main, .aheader__main{
@@ -1270,7 +1438,7 @@ a{
     width: 100%;
     height: 400px;
     margin: 0 auto;
-    background-image: url(../img/apartments__img/a1/1.jpg);
+    background-image: url(../img/apartments__img/a2/1.jpg);
     background-size: cover;
     background-position: center bottom;
     border-radius: 30px 0 0 30px;
@@ -1290,6 +1458,7 @@ a{
     color: #B5B8B1;
     background-color: rgba(138, 173, 160, 0.5);/*?????*/
     font-size: 20px;
+    cursor: pointer;
 }
 .apartmentone__button--left{
     left: 3px;
@@ -1394,7 +1563,6 @@ a{
     }
     .acatalog__item{
         width: 80%;
-        height: 410px;
     }
     .apartmen__part--two, .acatalog__part--two{
         background-image: linear-gradient( 0deg, rgba(110, 110, 110, 0.35), rgba(110, 110, 110, 0.35)), url(../img/apartment__header__fon1.jpg);
