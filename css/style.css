@@ -1009,9 +1009,9 @@ a{
 .realtor__stars{
     margin-top: 80px;       
 }
-.realtor__star{
-    width: 25px;
-    height: 25px;
+.realtor__stars svg{
+    width: 23px;
+    height: 21px;
 }
 .realtor__about--last{
     display: flex;
