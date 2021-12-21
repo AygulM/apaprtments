@@ -514,6 +514,9 @@ a{
     border-radius: 0 50px 0 0;
     padding: 30px;
 }
+.news__part-two a{
+    color: #0D3A2C;
+}
 .news__fon--1{
     background-image: url(../img/news/news3.jpg);
     background-position: center;
