@@ -561,7 +561,7 @@ a{
     .news__part-two h3{
         font-size: 18px;
     }
-    .news__part-two p, .news__part-two a{
+    .news__part-two p, .news__cont{
         display: none;
     }
 }
